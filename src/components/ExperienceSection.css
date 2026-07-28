@@ -1,0 +1,106 @@
+.experience-section {
+  padding: 80px 0;
+  margin: 0 20px;
+}
+
+.experience-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+}
+
+.experience-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.experience-card {
+  background-color: var(--bg-color-alt);
+  padding: 30px 40px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid #eaeaea;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.experience-card.first {
+  grid-column: 1 / -1;
+}
+
+.experience-card.square-card {
+  min-height: 350px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.experience-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+}
+
+.experience-card.square-card:hover {
+  background: var(--accent-gradient);
+  color: #fff;
+}
+
+.experience-card.square-card:hover .exp-title,
+.experience-card.square-card:hover .exp-desc {
+  color: #fff;
+}
+
+.exp-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.exp-desc {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 991px) {
+  .experience-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-block {
+    grid-template-columns: 1fr;
+  }
+  .experience-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .experience-section {
+    padding: 60px 0;
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-section { padding: 40px 0; }
+  .experience-card { padding: 20px; }
+  .experience-card.square-card { min-height: auto; }
+}
+
+@media (max-width: 375px) {
+  .experience-section { padding: 30px 0; }
+  .experience-card { padding: 15px; gap: 10px; }
+  .exp-title { font-size: 1.3rem; }
+}
+
+@media (max-width: 320px) {
+  .experience-card { padding: 12px; }
+  .exp-title { font-size: 1.2rem; }
+  .exp-desc { font-size: 0.9rem; }
+}
