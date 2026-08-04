@@ -69,8 +69,7 @@ h6 {
   font-size: 1.25rem;
 }
 
-/* Apply orange color specifically to main headings */
-.hero-heading,
+/* Apply gradient color specifically to main headings */
 .section-title h2,
 .section-title h1 {
   background: var(--accent-gradient);

@@ -18,17 +18,22 @@
   /* Prevents grid blowout from large slider */
 }
 
+.marquee-wrapper {
+  overflow: hidden;
+  container-type: inline-size;
+}
+
 .slider {
   display: flex;
-  overflow-x: auto;
   gap: 30px;
+  width: max-content;
   padding-bottom: 20px;
-  scrollbar-width: none;
-  /* Firefox */
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 15px)); }
 }
 
 .slider::-webkit-scrollbar {
@@ -37,8 +42,8 @@
 }
 
 .slide {
-  scroll-snap-align: start;
-  flex: 0 0 100%;
+  flex: 0 0 100cqw;
+  width: 100cqw;
   background-color: var(--bg-color);
   padding: 50px;
   border-radius: 24px;
@@ -107,32 +112,7 @@
   transition: color 0.3s ease;
 }
 
-.slider-controls {
-  display: flex;
-  gap: 15px;
-  margin-top: 30px;
-}
 
-.slider-btn {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 1px solid #eaeaea;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.slider-btn:hover {
-  background: var(--accent-gradient);
-}
-
-.slider-btn:hover img {
-  filter: invert(1);
-}
 
 @media (max-width: 991px) {
   .testimonials-container {

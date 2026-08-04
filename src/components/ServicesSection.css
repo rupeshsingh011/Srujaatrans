@@ -1,14 +1,18 @@
 .services-section {
   background-color: var(--bg-color-alt);
-  padding: 80px 0;
+  padding: 80px 0 80px 0;
   border-radius: 40px;
-  margin: 0 20px;
+  margin: 15px 20px 0;
 }
 
 .services-container {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 60px;
+}
+
+.services-section .caption-outer {
+  margin-bottom: 20px;
 }
 
 .services-right {
@@ -75,21 +79,29 @@
     grid-template-columns: 1fr;
   }
   .services-section {
-    padding: 60px 0;
-    margin: 0 10px;
+    padding: 60px 0 60px 0;
+    margin: 15px 10px 0;
     border-radius: 24px;
   }
 }
 
 @media (max-width: 480px) {
-  .services-section { padding: 40px 0; }
+  .services-section { padding: 40px 0 40px 0; margin: 15px 10px 0; }
   .service-card { padding: 20px; gap: 15px; }
   .service-title { font-size: 1.3rem; margin-bottom: 8px; }
   .service-icon { width: 50px; height: 50px; }
 }
 
+@media (max-width: 425px) {
+  .services-section {
+    padding: 30px 0 30px 0;
+    margin: 15px 5px 0;
+    border-radius: 20px;
+  }
+}
+
 @media (max-width: 375px) {
-  .services-section { padding: 30px 0; }
+  .services-section { padding: 30px 0 30px 0; }
   .service-title { font-size: 1.2rem; }
   .service-card p { font-size: 0.95rem; }
 }

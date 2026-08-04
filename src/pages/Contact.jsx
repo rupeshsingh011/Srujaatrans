@@ -8,11 +8,11 @@ const Contact = () => {
   useReveal();
 
   const [formData, setFormData] = useState({
-    name: '',
+    fullName: '',
     email: '',
     countryCode: '+91',
     phone: '',
-    message: ''
+    sendMessage: ''
   });
   const [status, setStatus] = useState('');
 
@@ -31,16 +31,16 @@ const Contact = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: `${formData.countryCode} ${formData.phone}`,
-          message: formData.message,
+          "Full Name": formData.fullName,
+          "Email": formData.email,
+          "Phone": `${formData.countryCode} ${formData.phone}`,
+          "Send Message": formData.sendMessage,
         }),
       });
 
       if (response.ok) {
         setStatus('Message sent successfully!');
-        setFormData({ name: '', email: '', countryCode: '+91', phone: '', message: '' });
+        setFormData({ fullName: '', email: '', countryCode: '+91', phone: '', sendMessage: '' });
       } else {
         setStatus('Failed to send message. Please try again.');
       }
@@ -91,7 +91,7 @@ const Contact = () => {
                 <form className="form" onSubmit={handleSubmit}>
                   <div className="form-inner">
                     <label className="field-label">{t('contact.fullName')}</label>
-                    <input type="text" name="name" value={formData.name} onChange={handleChange} className="text-field name" placeholder={t('contact.enterName')} required />
+                    <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} className="text-field name" placeholder={t('contact.enterName')} required />
                   </div>
                   <div className="form-inner">
                     <label className="field-label">{t('contact.email')}</label>
@@ -112,7 +112,7 @@ const Contact = () => {
                   </div>
                   <div className="form-inner full-width">
                     <label className="field-label">{t('contact.sendMessage')}</label>
-                    <textarea name="message" value={formData.message} onChange={handleChange} className="text-field message" placeholder={t('contact.enterMessage')} required></textarea>
+                    <textarea name="sendMessage" value={formData.sendMessage} onChange={handleChange} className="text-field message" placeholder={t('contact.enterMessage')} required></textarea>
                   </div>
                   <button type="submit" className="btn-primary form-submit">{t('contact.submit')}</button>
                   {status && <div style={{ gridColumn: 'span 2', marginTop: '15px', color: status.includes('success') ? 'green' : 'red', fontWeight: '500' }}>{status}</div>}

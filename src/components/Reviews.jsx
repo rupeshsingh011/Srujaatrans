@@ -88,21 +88,6 @@ const reviewsData = [
 
 const Reviews = () => {
   const { t } = useTranslation();
-  const sliderRef = useRef(null);
-
-  const scrollLeft = () => {
-    if (sliderRef.current) {
-      const width = sliderRef.current.offsetWidth;
-      sliderRef.current.scrollBy({ left: -width, behavior: 'smooth' });
-    }
-  };
-
-  const scrollRight = () => {
-    if (sliderRef.current) {
-      const width = sliderRef.current.offsetWidth;
-      sliderRef.current.scrollBy({ left: width, behavior: 'smooth' });
-    }
-  };
 
   return (
     <section className="testimonials-section bg-background-1" id="reviews">
@@ -117,34 +102,27 @@ const Reviews = () => {
         </div>
 
         <div className="testimonials-right">
-          <div className="slider" ref={sliderRef}>
-            {reviewsData.map((review) => (
-              <div className="slide" key={review.id}>
-                <div className="slide-inner">
-                  <div className="slide-top">
-                    <div className="image-container">
-                      <img src={review.image} alt="User" />
+          <div className="marquee-wrapper">
+            <div className="slider">
+              {[...reviewsData, ...reviewsData].map((review, index) => (
+                <div className="slide" key={`${review.id}-${index}`}>
+                  <div className="slide-inner">
+                    <div className="slide-top">
+                      <div className="image-container">
+                        <img src={review.image} alt="User" />
+                      </div>
+                      <div>
+                        <h6>{t(review.nameKey)}</h6>
+                        <div className="slide-role">{t(review.roleKey)}</div>
+                      </div>
                     </div>
-                    <div>
-                      <h6>{t(review.nameKey)}</h6>
-                      <div className="slide-role">{t(review.roleKey)}</div>
+                    <div className="slide-content">
+                      {t(review.textKey)}
                     </div>
-                  </div>
-                  <div className="slide-content">
-                    {t(review.textKey)}
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="slider-controls">
-            <button className="slider-btn left" onClick={scrollLeft}>
-              <img src="https://cdn.prod.website-files.com/6745a980958c413667256214/67484782f64be44c1d823576_arrow-left.svg" alt="Left" />
-            </button>
-            <button className="slider-btn right" onClick={scrollRight}>
-              <img src="https://cdn.prod.website-files.com/6745a980958c413667256214/6748481830f9df5f8429a3f2_arrow-right.svg" alt="Right" />
-            </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -32,14 +32,16 @@ const Navbar = () => {
             <button 
               className="lang-switcher-btn" 
               onClick={() => setIsLangOpen(!isLangOpen)}
-              style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '6px 12px', background: 'transparent', border: '1px solid #eaeaea', borderRadius: '50px', cursor: 'pointer', fontWeight: '600' }}
             >
               <img 
-                src={`https://flagcdn.com/w20/${i18n.language?.startsWith('mr') ? 'in' : i18n.language?.startsWith('de') ? 'de' : 'us'}.png`} 
+                src={`https://flagcdn.com/w20/${i18n.language?.startsWith('mr') || i18n.language?.startsWith('hi') ? 'in' : i18n.language?.startsWith('de') ? 'de' : 'us'}.png`} 
                 alt="Current Language" 
                 style={{ width: '20px', borderRadius: '2px' }} 
               />
               <span>{(i18n.language || 'en').toUpperCase()}</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: '2px', transition: 'transform 0.3s ease', transform: isLangOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}>
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
             </button>
             
             {isLangOpen && (
@@ -57,6 +59,13 @@ const Navbar = () => {
                   style={{ padding: '10px 15px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '14px', borderBottom: '1px solid #f5f5f5' }}
                 >
                   <img src="https://flagcdn.com/w20/in.png" alt="Indian Flag" style={{ width: '20px', borderRadius: '2px' }} /> MR
+                </div>
+                <div 
+                  className="lang-option" 
+                  onClick={() => { i18n.changeLanguage('hi'); setIsLangOpen(false); }}
+                  style={{ padding: '10px 15px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontSize: '14px', borderBottom: '1px solid #f5f5f5' }}
+                >
+                  <img src="https://flagcdn.com/w20/in.png" alt="Indian Flag" style={{ width: '20px', borderRadius: '2px' }} /> HI
                 </div>
                 <div 
                   className="lang-option" 

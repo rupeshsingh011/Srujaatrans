@@ -8,6 +8,8 @@ const HeroSection = () => {
 
   return (
     <section className="hero-section" id="home">
+
+      <img src="Srujaa.png" alt="Srujaa Portrait" className="hero-bg-logo" />
       <div className="container hero-container">
         {/* Left Column: Text & Skills */}
         <div className="hero-left">
@@ -26,19 +28,8 @@ const HeroSection = () => {
                 </React.Fragment>
               ))}
             </h1>
-            <a href="mailto:jobs@srujaatrans.com" className="hero-email">jobs@srujaatrans.com</a>
             <p className="hero-description" dangerouslySetInnerHTML={{ __html: t('hero.description') }}></p>
-          </div>
-        </div>
-
-        {/* Right Column: Stats & Awards */}
-        <div className="hero-right">
-          <div className="hero-experience">
-            <div className="exp-stats">
-              <h2 className="exp-years">14+</h2>
-              <p className="exp-text">{t('hero.years')}<br />{t('hero.ofExperience')}</p>
-            </div>
-
+            <hr style={{ border: 'none', borderTop: '1px solid #eaeaea', width: '50%', margin: '0 0 15px 0', marginLeft: '0' }} />
             <div className="hero-awards">
               <div className="award-card" onClick={() => setActiveModalImage('CTP.png')} style={{ cursor: 'pointer' }}>
                 <div>
@@ -64,6 +55,8 @@ const HeroSection = () => {
           </div>
         </div>
 
+
+
       </div>
 
       {activeModalImage && (
@@ -74,6 +67,8 @@ const HeroSection = () => {
           </div>
         </div>
       )}
+
+
     </section>
   );
 };

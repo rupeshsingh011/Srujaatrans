@@ -21,12 +21,12 @@ const SkillsSection = () => {
           <div className="skills-grid translation-grid">
             {[
               'SDL Trados Studio', 'Wordfast', 'Translation Workspace', 'InDesign',
-              'Xbench', 'Envelope', 'ShreeLipi', 'Xliff Editor', 'ISM, etc...',
+              'Xbench', 'Envelope', 'Xliff Editor', 'ISM, etc...',
               'Across', 'MemoQ', 'Coach', 'Phrase', 'Matecat'
             ].map((tool, index) => {
               return (
-                <div 
-                  className="skill-card-lg" 
+                <div
+                  className="skill-card-lg"
                   key={tool}
                   style={['Translation Workspace', 'Envelope', 'ISM, etc...', 'Coach'].includes(tool) ? { width: 'calc(100% + 10px)' } : {}}
                 >

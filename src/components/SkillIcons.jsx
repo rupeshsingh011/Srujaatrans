@@ -42,12 +42,7 @@ export const getSkillIcon = (toolName) => {
           <path d="M8 18l24 16 24-16" stroke="#FFF" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       );
-    case 'ShreeLipi':
-      return (
-        <svg viewBox="0 0 64 64" fill="none" style={{ width: '100%', height: '100%' }}>
-          <text x="32" y="46" fontSize="36" fontWeight="bold" fill="#D32F2F" textAnchor="middle" fontFamily="sans-serif">श्री</text>
-        </svg>
-      );
+
     case 'Xliff Editor':
       return (
         <svg viewBox="0 0 64 64" fill="none" style={{ width: '100%', height: '100%' }}>

@@ -1,11 +1,77 @@
 .hero-section {
-  padding: 160px 0 80px;
-  /* Increased top padding for navbar */
-  background-image: url('/hero-bg.png');
+  padding: 50px 0 0px;
+  /* Minimized bottom padding to 0px as requested */
+  margin-top: 92px;
+  background-image: url('/home.png');
   background-size: cover;
-  background-position: center 10%;
+  background-position: center 35%;
+  /* shifted slightly down from 50% */
   background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
   min-height: 100vh;
+}
+
+.hero-bg-logo {
+  position: absolute;
+  bottom: -10px;
+  /* moved down 10px */
+  margin-top: 10px;
+  right: 5%;
+  width: 500px;
+  max-width: 60%;
+  opacity: 1;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 0;
+  /* Placed behind text */
+  transform: scaleX(-1);
+  /* Horizontally inverses the wave */
+}
+
+.hero-wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 500px;
+  /* 2x height */
+}
+
+.hero-wave path {
+  fill: url(#wave-gradient);
+  /* Uses combination of purple and dark blue from image */
+}
+
+.hero-wave-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 0;
+  transform: scaleY(-1);
+}
+
+.hero-wave-top svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 400px;
+  /* increased to extend further down */
+}
+
+.hero-wave-top path {
+  fill: url(#wave-gradient);
 }
 
 .hero-container {
@@ -16,27 +82,33 @@
   margin-left: 0;
   padding-left: 4vw;
   max-width: none;
-}
-
-.hero-left,
-.hero-right {
-  max-width: 500px;
+  position: relative;
+  z-index: 10;
+  /* Placed on top of wave */
 }
 
 .hero-left {
-  margin-top: 80px;
+  max-width: 650px;
+  margin-right: 40px;
+  margin-top: 0px;
+  margin-left: 30px;
+}
+
+.hero-right {
+  max-width: 500px;
 }
 
 .hero-subtitle {
   display: flex;
   align-items: center;
   gap: 10px;
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 8px 16px;
   border-radius: 50px;
   display: inline-flex;
   font-weight: 500;
   font-size: 0.9rem;
+  margin-top: -100px;
   margin-bottom: 30px;
   border: 1px solid #eaeaea;
   transition: all 0.3s ease;
@@ -72,13 +144,9 @@
   font-size: 5rem;
   font-weight: 800;
   line-height: 1.1;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   letter-spacing: -0.03em;
-  background: var(--accent-gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
+  color: #ffffff !important;
   text-shadow: none;
 }
 
@@ -87,9 +155,9 @@
   margin-bottom: 24px;
   font-weight: 500;
   font-size: 1.25rem;
-  color: #ffffff;
+  color: #1a1a2e;
   text-decoration: none;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: none;
   transition: all 0.3s ease;
 }
 
@@ -100,10 +168,11 @@
 
 .hero-description {
   font-size: 1.1rem;
-  color: #fff;
-  margin-bottom: 40px;
+  color: #ffffff;
+  /* Changed to white per user request */
+  margin-bottom: 20px;
   line-height: 1.6;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: none;
 }
 
 .hero-outer h6 {
@@ -177,47 +246,54 @@
   font-weight: 800;
   line-height: 1;
   margin: 0;
-  background: var(--accent-gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
+  color: #ffffff;
   text-shadow: none;
 }
 
 .exp-text {
   font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: #ffffff;
   font-weight: 500;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: none;
 }
 
 .hero-awards {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 12px;
 }
 
 .award-card {
   display: flex;
   align-items: center;
   gap: 15px;
+  transition: all 0.3s ease;
+  padding: 10px;
+  border-radius: 8px;
+  margin-left: -10px; /* offset the padding so it visually aligns */
+}
+
+.award-card:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 15px rgba(255, 183, 77, 0.2);
 }
 
 .award-card h6 {
   font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 4px;
-  color: #fff;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  color: #ffffff !important;
+  text-shadow: none;
+  transition: all 0.3s ease;
 }
 
 .award-desc {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: #ffffff !important;
   margin: 0;
   line-height: 1.4;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: none;
 }
 
 @media (max-width: 1024px) {
@@ -272,36 +348,84 @@
 }
 
 @media (max-width: 480px) {
-  .hero-section { padding: 120px 0 60px; }
-  .hero-heading { font-size: 2.5rem; }
-  .hero-skills { flex-wrap: wrap; justify-content: center; }
-  .hero-email { font-size: 1.1rem; }
+  .hero-section {
+    padding: 120px 0 60px;
+  }
+
+  .hero-heading {
+    font-size: 2.5rem;
+  }
+
+  .hero-skills {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-email {
+    font-size: 1.1rem;
+  }
 }
 
 @media (max-width: 425px) {
-  .hero-section { padding: 100px 0 50px; }
-  .hero-heading { font-size: 2.3rem; }
-  .exp-years { font-size: 3.5rem; }
-  .award-card { flex-direction: column; align-items: flex-start; }
+  .hero-section {
+    padding: 100px 0 50px;
+  }
+
+  .hero-heading {
+    font-size: 2.3rem;
+  }
+
+  .exp-years {
+    font-size: 3.5rem;
+  }
+
+  .award-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 375px) {
-  .hero-heading { font-size: 2.1rem; }
-  .hero-subtitle { font-size: 0.85rem; padding: 6px 14px; }
-  .hero-email { font-size: 1rem; }
-  .exp-years { font-size: 3rem; }
+  .hero-heading {
+    font-size: 2.1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.85rem;
+    padding: 6px 14px;
+  }
+
+  .hero-email {
+    font-size: 1rem;
+  }
+
+  .exp-years {
+    font-size: 3rem;
+  }
 }
 
 @media (max-width: 320px) {
-  .hero-heading { font-size: 1.8rem; }
-  .hero-description { font-size: 1rem; }
-  .hero-container { padding-left: 10px; padding-right: 10px; }
-  .exp-years { font-size: 2.5rem; }
+  .hero-heading {
+    font-size: 1.8rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .exp-years {
+    font-size: 2.5rem;
+  }
 }
 
 .award-card:hover h6 {
-  color: #ffb74d;
-  /* Light orange hover effect */
+  color: #ffb74d !important;
+  text-shadow: 0 0 10px rgba(255, 183, 77, 0.8), 0 0 20px rgba(255, 183, 77, 0.5);
 }
 
 .image-modal-overlay {
