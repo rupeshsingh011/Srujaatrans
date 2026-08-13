@@ -2,7 +2,7 @@
   padding: 50px 0 0px;
   /* Minimized bottom padding to 0px as requested */
   margin-top: 92px;
-  background-image: url('/home.png');
+  background-image: url('/Mugdha.png');
   background-size: cover;
   background-position: center 35%;
   /* shifted slightly down from 50% */
@@ -270,7 +270,8 @@
   transition: all 0.3s ease;
   padding: 10px;
   border-radius: 8px;
-  margin-left: -10px; /* offset the padding so it visually aligns */
+  margin-left: -10px;
+  /* offset the padding so it visually aligns */
 }
 
 .award-card:hover {

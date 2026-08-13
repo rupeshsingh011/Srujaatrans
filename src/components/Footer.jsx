@@ -51,7 +51,7 @@ const Footer = () => {
 
               <div className="footer-info">
                 <div className="footer-image">
-                  <img src="/Mugdha_img.png" alt="Profile" className="cover-image" />
+                  <img src="/MG-1.png" alt="Profile" className="cover-image" />
                 </div>
               </div>
             </div>
