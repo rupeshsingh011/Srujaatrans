@@ -5,6 +5,7 @@ import WorkSection from '../components/WorkSection';
 import ServicesSection from '../components/ServicesSection';
 import ExperienceSection from '../components/ExperienceSection';
 import SkillsSection from '../components/SkillsSection';
+import CertificationsSection from '../components/CertificationsSection';
 import Companies from '../components/Companies';
 import Reviews from '../components/Reviews';
 import FaqSection from '../components/FaqSection';
@@ -21,6 +22,7 @@ const Home = () => {
       <ServicesSection />
       <ExperienceSection />
       <SkillsSection />
+      <CertificationsSection />
       <Companies />
       <Reviews />
       <FaqSection />
