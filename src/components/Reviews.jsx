@@ -12,6 +12,7 @@ import saudisoftImg from '../assets/saudisoft.png';
 import tradoonImg from '../assets/tradoon.jpg';
 import vokianImg from '../assets/vokian.jpg';
 import devdattaImg from '../assets/Devdatta.gif';
+import multitranmediaImg from '../assets/multitranmedia.png';
 
 const reviewsData = [
   {
@@ -83,6 +84,13 @@ const reviewsData = [
     roleKey: 'reviews.r10Role',
     image: vokianImg,
     textKey: 'reviews.r10Text'
+  },
+  {
+    id: 11,
+    nameKey: 'reviews.r11Name',
+    roleKey: 'reviews.r11Role',
+    image: multitranmediaImg,
+    textKey: 'reviews.r11Text'
   }
 ];
 
@@ -109,7 +117,7 @@ const Reviews = () => {
                   <div className="slide-inner">
                     <div className="slide-top">
                       <div className="image-container">
-                        <img src={review.image} alt="User" />
+                        {review.image ? <img src={review.image} alt="User" /> : <div className="placeholder-avatar">U</div>}
                       </div>
                       <div>
                         <h6>{t(review.nameKey)}</h6>

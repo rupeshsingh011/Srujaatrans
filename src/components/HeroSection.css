@@ -148,6 +148,12 @@
   letter-spacing: -0.03em;
   color: #ffffff !important;
   text-shadow: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.hero-heading:hover {
+  color: #ffb74d !important;
+  text-shadow: 0 0 10px rgba(255, 183, 77, 0.5), 0 0 15px rgba(255, 183, 77, 0.3);
 }
 
 .hero-email {

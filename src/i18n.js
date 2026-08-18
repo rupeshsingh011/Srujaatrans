@@ -143,7 +143,10 @@ const resources = {
         r9Text: "“Excellent translator to work with. Highly recommended!”",
         r10Name: "vokian_inc",
         r10Role: "Vokian Localization",
-        r10Text: "“Very professional and reliable! Always meets our expectations and deliver quality work..”"
+        r10Text: "“Very professional and reliable! Always meets our expectations and deliver quality work..”",
+        r11Name: "Mohd. Zaman.(Multi Trans Media) Translations Agency",
+        r11Role: "ProZ.com Blue Board MultiTransMedia",
+        r11Text: "“Very professional and reliable linguist. Excellent command of the target language, accurate terminology, and strong attention to detail. The work was delivered on time and required minimal revision. Highly recommended for future projects.”"
       },
       contact: {
         title: "Contact US",
@@ -167,6 +170,10 @@ const resources = {
         desc: "I am available for new projects and collaborations, helping businesses communicate globally through precise translation, localization, editing, and linguistic quality assurance.",
         copyright: "© 2026 Srujaatrans",
         workBy: "Work by Mugdha."
+      },
+      certifications: {
+        title: "Achievements",
+        heading: "Certifications"
       },
       faq: {
         title: "FAQ",
@@ -324,7 +331,10 @@ const resources = {
         r9Text: "“Excellent translator to work with. Highly recommended!”",
         r10Name: "vokian_inc",
         r10Role: "Vokian Localization",
-        r10Text: "“Very professional and reliable! Always meets our expectations and deliver quality work..”"
+        r10Text: "“Very professional and reliable! Always meets our expectations and deliver quality work..”",
+        r11Name: "Mohd. Zaman.(Multi Trans Media) Translations Agency",
+        r11Role: "ProZ.com Blue Board MultiTransMedia",
+        r11Text: "“Very professional and reliable linguist. Excellent command of the target language, accurate terminology, and strong attention to detail. The work was delivered on time and required minimal revision. Highly recommended for future projects.”"
       },
       contact: {
         title: "आमच्याशी संपर्क साधा",
@@ -348,6 +358,10 @@ const resources = {
         desc: "मी नवीन प्रोजेक्ट आणि सहकाऱ्यासाठी उपलब्ध आहे, अचूक भाषांतर, लोकलायजेशन, संपादन आणि भाषिक गुणवत्ता आश्वासनाद्वारे व्यवसायांना जागतिक स्तरावर संवाद साधण्यास मदत करते.",
         copyright: "© 2026 Srujaatrans",
         workBy: "मुग्धा यांचे काम."
+      },
+      certifications: {
+        title: "यश",
+        heading: "प्रमाणपत्रे"
       },
       faq: {
         title: "सामान्य प्रश्न",
@@ -505,7 +519,10 @@ const resources = {
         r9Text: "“Excellent translator to work with. Highly recommended!”",
         r10Name: "vokian_inc",
         r10Role: "Vokian Localization",
-        r10Text: "“Very professional and reliable! Always meets our expectations and deliver quality work..”"
+        r10Text: "“Very professional and reliable! Always meets our expectations and deliver quality work..”",
+        r11Name: "Mohd. Zaman.(Multi Trans Media) Translations Agency",
+        r11Role: "ProZ.com Blue Board MultiTransMedia",
+        r11Text: "“Very professional and reliable linguist. Excellent command of the target language, accurate terminology, and strong attention to detail. The work was delivered on time and required minimal revision. Highly recommended for future projects.”"
       },
       contact: {
         title: "संपर्क करें",
@@ -529,6 +546,10 @@ const resources = {
         desc: "मैं नई परियोजनाओं और सहयोगों के लिए उपलब्ध, जिससे व्यवसायों को सटीक अनुवाद, लोकलाइजेशन, संपादन और भाषाई गुणवत्ता आश्वासन के माध्यम से विश्व स्तर पर संवाद करने में मदद मिलती है।",
         copyright: "© 2026 Srujaatrans",
         workBy: "मुग्धा द्वारा काम।"
+      },
+      certifications: {
+        title: "उपलब्धियां",
+        heading: "प्रमाणपत्र"
       },
       faq: {
         title: "सामान्य प्रश्न",
@@ -686,7 +707,10 @@ const resources = {
         r9Text: "“Excellent translator to work with. Highly recommended!”",
         r10Name: "vokian_inc",
         r10Role: "Vokian Localization",
-        r10Text: "“Very professional and reliable! Always meets our expectations and deliver quality work..”"
+        r10Text: "“Very professional and reliable! Always meets our expectations and deliver quality work..”",
+        r11Name: "Mohd. Zaman.(Multi Trans Media) Translations Agency",
+        r11Role: "ProZ.com Blue Board MultiTransMedia",
+        r11Text: "“Very professional and reliable linguist. Excellent command of the target language, accurate terminology, and strong attention to detail. The work was delivered on time and required minimal revision. Highly recommended for future projects.”"
       },
       contact: {
         title: "Kontaktiere uns",
@@ -710,6 +734,10 @@ const resources = {
         desc: "Ich stehe für neue Projekte und Kooperationen zur Verfügung, um Unternehmen dabei zu helfen, durch präzise Übersetzungen, Lokalisierung, Bearbeitung und linguistische Qualitätssicherung weltweit zu kommunizieren.",
         copyright: "© 2026 Srujaatrans",
         workBy: "Arbeit von Mugdha."
+      },
+      certifications: {
+        title: "Erfolge",
+        heading: "Zertifizierungen"
       },
       faq: {
         title: "FAQ",
