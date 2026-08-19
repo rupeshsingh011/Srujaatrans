@@ -1,4 +1,4 @@
-import React from 'react';
+  import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './AboutSection.css';
@@ -96,7 +96,7 @@ const AboutSection = () => {
           </div>
           <div className="button-wrap">
             <a href="/Mugdha_Resume.pdf" download="Mugdha_Resume.pdf" className="btn-secondary" target="_blank" rel="noopener noreferrer">{t('about.downloadResume')}</a>
-            <a href="/BCV_Mugdha%20Ghate_V25.pdf" download="BCV_Mugdha_Ghate_V25.pdf" className="btn-secondary" target="_blank" rel="noopener noreferrer">{t('about.downloadCV')}</a>
+            <a href="/CV_Mugdha%20Ghate_V28.pdf" download="CV_Mugdha_Ghate_V28.pdf" className="btn-secondary" target="_blank" rel="noopener noreferrer">{t('about.downloadCV')}</a>
           </div>
         </div>
       </div>

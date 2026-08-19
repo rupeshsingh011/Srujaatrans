@@ -86,7 +86,9 @@ const resources = {
         s3Title: "GER-ENG",
         s3Desc: "End Client: SAP, Source-Target: GER-ENG, Domain: IT, Word-Count: 70000",
         s4Title: "GER-HIN",
-        s4Desc: "Other than these above mentioned projects, I have also worked for various agencies on freelance basis on various projects..."
+        s4Desc: "Other than these above mentioned projects, I have also worked for various agencies on freelance basis on various projects...",
+        s5Title: "Sports and Sport Medicine",
+        s5Desc: "Word-Count: 25,000 words"
       },
       companies: {
         title: "Companies",
@@ -274,7 +276,9 @@ const resources = {
         s3Title: "GER-ENG",
         s3Desc: "अंतिम ग्राहक: SAP, स्त्रोत-लक्ष्य: GER-ENG, डोमेन: IT, शब्द-संख्या: 70000",
         s4Title: "GER-HIN",
-        s4Desc: "वर नमूद केलेल्या या प्रकल्पांव्यतिरिक्त, मी विविध संस्थांसाठी फ्रीलान्स तत्त्वावर विविध प्रकल्पांवर देखील काम केले आहे..."
+        s4Desc: "वर नमूद केलेल्या या प्रकल्पांव्यतिरिक्त, मी विविध संस्थांसाठी फ्रीलान्स तत्त्वावर विविध प्रकल्पांवर देखील काम केले आहे...",
+        s5Title: "Sports and Sport Medicine",
+        s5Desc: "शब्द-संख्या: 25,000 words"
       },
       companies: {
         title: "कंपन्या",
@@ -462,7 +466,9 @@ const resources = {
         s3Title: "GER-ENG",
         s3Desc: "अंतिम ग्राहक: SAP, स्रोत-लक्ष्य: GER-ENG, डोमेन: IT, शब्द-संख्या: 70000",
         s4Title: "GER-HIN",
-        s4Desc: "इन उपर्युक्त परियोजनाओं के अलावा, मैंने विभिन्न एजेंसियों के लिए फ्रीलांस आधार पर विभिन्न परियोजनाओं पर भी काम किया है..."
+        s4Desc: "इन उपर्युक्त परियोजनाओं के अलावा, मैंने विभिन्न एजेंसियों के लिए फ्रीलांस आधार पर विभिन्न परियोजनाओं पर भी काम किया है...",
+        s5Title: "Sports and Sport Medicine",
+        s5Desc: "शब्द-संख्या: 25,000 words"
       },
       companies: {
         title: "कंपनियां",
@@ -650,7 +656,9 @@ const resources = {
         s3Title: "GER-ENG",
         s3Desc: "Endkunde: SAP, Quelle-Ziel: GER-ENG, Fachgebiet: IT, Wortzahl: 70000",
         s4Title: "GER-HIN",
-        s4Desc: "Abgesehen von diesen oben genannten Projekten habe ich auch für verschiedene Agenturen auf freiberuflicher Basis an verschiedenen Projekten gearbeitet..."
+        s4Desc: "Abgesehen von diesen oben genannten Projekten habe ich auch für verschiedene Agenturen auf freiberuflicher Basis an verschiedenen Projekten gearbeitet...",
+        s5Title: "Sports and Sport Medicine",
+        s5Desc: "Wortzahl: 25.000 Wörter"
       },
       companies: {
         title: "Unternehmen",
