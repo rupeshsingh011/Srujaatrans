@@ -23,7 +23,7 @@ const ServicesSection = () => {
             </div>
             <div>
               <h5 className="service-title">{t('services.s1Title')}</h5>
-              <p>{t('services.s1Desc')}</p>
+              <p dangerouslySetInnerHTML={{ __html: t('services.s1Desc') }}></p>
             </div>
           </div>
 
@@ -33,7 +33,7 @@ const ServicesSection = () => {
             </div>
             <div>
               <h5 className="service-title">{t('services.s2Title')}</h5>
-              <p>{t('services.s2Desc')}</p>
+              <p dangerouslySetInnerHTML={{ __html: t('services.s2Desc') }}></p>
             </div>
           </div>
 
@@ -43,7 +43,7 @@ const ServicesSection = () => {
             </div>
             <div>
               <h5 className="service-title">{t('services.s3Title')}</h5>
-              <p>{t('services.s3Desc')}</p>
+              <p dangerouslySetInnerHTML={{ __html: t('services.s3Desc') }}></p>
             </div>
           </div>
 
@@ -53,18 +53,7 @@ const ServicesSection = () => {
             </div>
             <div>
               <h5 className="service-title">{t('services.s4Title')}</h5>
-              <p>
-                {t('services.s4Desc')}</p>
-            </div>
-          </div>
-
-          <div className="service-card">
-            <div className="service-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent-color)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-            </div>
-            <div>
-              <h5 className="service-title">{t('services.s5Title')}</h5>
-              <p>{t('services.s5Desc')}</p>
+              <p dangerouslySetInnerHTML={{ __html: t('services.s4Desc') }}></p>
             </div>
           </div>
         </div>

@@ -80,15 +80,13 @@ const resources = {
         title: "Services",
         heading: "My Prominent Projects ",
         s1Title: "ENG-MAR",
-        s1Desc: "End Client: Google, Source-Target: ENG-MAR, Domain: Google Maps, Cat tool/Application: GTT, Word-Count: regular small drops...",
+        s1Desc: "End Client: Google, Source-Target: ENG-MAR, Domain: Google Maps, Cat tool/Application: GTT, Word-Count: regular small drops...<br/>Sports and Sports medicine:  more than 35000 words",
         s2Title: "ENG-HIN",
-        s2Desc: "Project: Dictionary Creation, Source-Target: -ENG to HIN, Domain: Tourism, Cat tool/Application: MS Excel, Word-Count: 40000. Detail: Dictionary Creation for Tourism industry.",
+        s2Desc: "Project: Dictionary Creation, Source-Target: -ENG to HIN, Domain: Tourism, Cat tool/Application: MS Excel, Word-Count: 40000. Detail: Dictionary Creation for Tourism industry.<br/>Sports and Sports medicine:  more than 35000 words",
         s3Title: "GER-ENG",
         s3Desc: "End Client: SAP, Source-Target: GER-ENG, Domain: IT, Word-Count: 70000",
         s4Title: "GER-HIN",
-        s4Desc: "Other than these above mentioned projects, I have also worked for various agencies on freelance basis on various projects...",
-        s5Title: "Sports and Sport Medicine",
-        s5Desc: "Word-Count: 25,000 words"
+        s4Desc: "Other than these above mentioned projects, I have also worked for various agencies on freelance basis on various projects..."
       },
       companies: {
         title: "Companies",
@@ -270,15 +268,13 @@ const resources = {
         title: "सेवा",
         heading: "माझे प्रमुख प्रोजेक्ट ",
         s1Title: "ENG-MAR",
-        s1Desc: "अंतिम ग्राहक: Google, स्त्रोत-लक्ष्य: ENG-MAR, डोमेन: Google नकाशे, CAT साधन/ॲप्लिकेशन: GTT, शब्द-संख्या: नियमित लहान कामे...",
+        s1Desc: "अंतिम ग्राहक: Google, स्त्रोत-लक्ष्य: ENG-MAR, डोमेन: Google नकाशे, CAT साधन/ॲप्लिकेशन: GTT, शब्द-संख्या: नियमित लहान कामे...<br/>क्रीडा आणि क्रीडा औषध: 35000 हून अधिक शब्द",
         s2Title: "ENG-HIN",
-        s2Desc: "प्रोजेक्ट: शब्दकोश निर्मिती, स्त्रोत-लक्ष्य: ENG ते HIN, डोमेन: पर्यटन, CAT साधन/ॲप्लिकेशन: MS Excel, शब्द-संख्या: 40000. तपशील: पर्यटन उद्योगासाठी शब्दकोश निर्मिती.",
+        s2Desc: "प्रोजेक्ट: शब्दकोश निर्मिती, स्त्रोत-लक्ष्य: ENG ते HIN, डोमेन: पर्यटन, CAT साधन/ॲप्लिकेशन: MS Excel, शब्द-संख्या: 40000. तपशील: पर्यटन उद्योगासाठी शब्दकोश निर्मिती.<br/>क्रीडा आणि क्रीडा औषध: 35000 हून अधिक शब्द",
         s3Title: "GER-ENG",
         s3Desc: "अंतिम ग्राहक: SAP, स्त्रोत-लक्ष्य: GER-ENG, डोमेन: IT, शब्द-संख्या: 70000",
         s4Title: "GER-HIN",
-        s4Desc: "वर नमूद केलेल्या या प्रकल्पांव्यतिरिक्त, मी विविध संस्थांसाठी फ्रीलान्स तत्त्वावर विविध प्रकल्पांवर देखील काम केले आहे...",
-        s5Title: "Sports and Sport Medicine",
-        s5Desc: "शब्द-संख्या: 25,000 words"
+        s4Desc: "वर नमूद केलेल्या या प्रकल्पांव्यतिरिक्त, मी विविध संस्थांसाठी फ्रीलान्स तत्त्वावर विविध प्रकल्पांवर देखील काम केले आहे..."
       },
       companies: {
         title: "कंपन्या",
@@ -460,15 +456,13 @@ const resources = {
         title: "सेवाएं",
         heading: "मेरे प्रमुख प्रोजेक्ट्स ",
         s1Title: "ENG-MAR",
-        s1Desc: "अंतिम ग्राहक: Google, स्रोत-लक्ष्य: ENG-MAR, डोमेन: Google मानचित्र, CAT टूल/एप्लिकेशन: GTT, शब्द-संख्या: नियमित छोटे काम...",
+        s1Desc: "अंतिम ग्राहक: Google, स्रोत-लक्ष्य: ENG-MAR, डोमेन: Google मानचित्र, CAT टूल/एप्लिकेशन: GTT, शब्द-संख्या: नियमित छोटे काम...<br/>खेल और खेल चिकित्सा: 35000 से अधिक शब्द",
         s2Title: "ENG-HIN",
-        s2Desc: "प्रोजेक्ट: डिक्शनरी निर्माण, स्रोत-लक्ष्य: ENG से HIN, डोमेन: पर्यटन, CAT टूल/एप्लिकेशन: MS Excel, शब्द-संख्या: 40000. विवरण: पर्यटन उद्योग के लिए डिक्शनरी निर्माण।",
+        s2Desc: "प्रोजेक्ट: डिक्शनरी निर्माण, स्रोत-लक्ष्य: ENG से HIN, डोमेन: पर्यटन, CAT टूल/एप्लिकेशन: MS Excel, शब्द-संख्या: 40000. विवरण: पर्यटन उद्योग के लिए डिक्शनरी निर्माण।<br/>खेल और खेल चिकित्सा: 35000 से अधिक शब्द",
         s3Title: "GER-ENG",
         s3Desc: "अंतिम ग्राहक: SAP, स्रोत-लक्ष्य: GER-ENG, डोमेन: IT, शब्द-संख्या: 70000",
         s4Title: "GER-HIN",
-        s4Desc: "इन उपर्युक्त परियोजनाओं के अलावा, मैंने विभिन्न एजेंसियों के लिए फ्रीलांस आधार पर विभिन्न परियोजनाओं पर भी काम किया है...",
-        s5Title: "Sports and Sport Medicine",
-        s5Desc: "शब्द-संख्या: 25,000 words"
+        s4Desc: "इन उपर्युक्त परियोजनाओं के अलावा, मैंने विभिन्न एजेंसियों के लिए फ्रीलांस आधार पर विभिन्न परियोजनाओं पर भी काम किया है..."
       },
       companies: {
         title: "कंपनियां",
@@ -650,15 +644,13 @@ const resources = {
         title: "Dienstleistungen",
         heading: "Meine herausragenden Projekte ",
         s1Title: "ENG-MAR",
-        s1Desc: "Endkunde: Google, Quelle-Ziel: ENG-MAR, Fachgebiet: Google Maps, CAT-Tool/Anwendung: GTT, Wortzahl: regelmäßige kleine Aufträge...",
+        s1Desc: "Endkunde: Google, Quelle-Ziel: ENG-MAR, Fachgebiet: Google Maps, CAT-Tool/Anwendung: GTT, Wortzahl: regelmäßige kleine Aufträge...<br/>Sport und Sportmedizin: mehr als 35000 Wörter",
         s2Title: "ENG-HIN",
-        s2Desc: "Projekt: Wörterbucherstellung, Quelle-Ziel: ENG nach HIN, Fachgebiet: Tourismus, CAT-Tool/Anwendung: MS Excel, Wortzahl: 40000. Detail: Wörterbucherstellung für die Tourismusbranche.",
+        s2Desc: "Projekt: Wörterbucherstellung, Quelle-Ziel: ENG nach HIN, Fachgebiet: Tourismus, CAT-Tool/Anwendung: MS Excel, Wortzahl: 40000. Detail: Wörterbucherstellung für die Tourismusbranche.<br/>Sport und Sportmedizin: mehr als 35000 Wörter",
         s3Title: "GER-ENG",
         s3Desc: "Endkunde: SAP, Quelle-Ziel: GER-ENG, Fachgebiet: IT, Wortzahl: 70000",
         s4Title: "GER-HIN",
-        s4Desc: "Abgesehen von diesen oben genannten Projekten habe ich auch für verschiedene Agenturen auf freiberuflicher Basis an verschiedenen Projekten gearbeitet...",
-        s5Title: "Sports and Sport Medicine",
-        s5Desc: "Wortzahl: 25.000 Wörter"
+        s4Desc: "Abgesehen von diesen oben genannten Projekten habe ich auch für verschiedene Agenturen auf freiberuflicher Basis an verschiedenen Projekten gearbeitet..."
       },
       companies: {
         title: "Unternehmen",
