@@ -13,6 +13,7 @@ import tradoonImg from '../assets/tradoon.jpg';
 import vokianImg from '../assets/vokian.jpg';
 import devdattaImg from '../assets/Devdatta.gif';
 import multitranmediaImg from '../assets/multitranmedia.png';
+import emcImg from '../assets/emc.jpg';
 
 const reviewsData = [
   {
@@ -91,6 +92,13 @@ const reviewsData = [
     roleKey: 'reviews.r11Role',
     image: multitranmediaImg,
     textKey: 'reviews.r11Text'
+  },
+  {
+    id: 12,
+    nameKey: 'reviews.r12Name',
+    roleKey: 'reviews.r12Role',
+    image: emcImg,
+    textKey: 'reviews.r12Text'
   }
 ];
 

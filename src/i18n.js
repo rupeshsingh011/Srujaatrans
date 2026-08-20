@@ -146,7 +146,10 @@ const resources = {
         r10Text: "“Very professional and reliable! Always meets our expectations and deliver quality work..”",
         r11Name: "Mohd. Zaman.(Multi Trans Media) Translations Agency",
         r11Role: "ProZ.com Blue Board MultiTransMedia",
-        r11Text: "“Very professional and reliable linguist. Excellent command of the target language, accurate terminology, and strong attention to detail. The work was delivered on time and required minimal revision. Highly recommended for future projects.”"
+        r11Text: "“Very professional and reliable linguist. Excellent command of the target language, accurate terminology, and strong attention to detail. The work was delivered on time and required minimal revision. Highly recommended for future projects.”",
+        r12Name: "Asif Khan",
+        r12Role: "Project Manager | ENS Translate (ENS Pvt. Ltd.)",
+        r12Text: "“We have always appreciated the quality and professionalism of your work. Your translations have been accurate, well-aligned with the project requirements, and delivered within the agreed timelines. We have also found your communication and responsiveness to be very good throughout our collaboration. Overall, we are satisfied with your services and appreciate your commitment to maintaining quality standards.”"
       },
       contact: {
         title: "Contact US",
@@ -334,7 +337,10 @@ const resources = {
         r10Text: "“Very professional and reliable! Always meets our expectations and deliver quality work..”",
         r11Name: "Mohd. Zaman.(Multi Trans Media) Translations Agency",
         r11Role: "ProZ.com Blue Board MultiTransMedia",
-        r11Text: "“Very professional and reliable linguist. Excellent command of the target language, accurate terminology, and strong attention to detail. The work was delivered on time and required minimal revision. Highly recommended for future projects.”"
+        r11Text: "“Very professional and reliable linguist. Excellent command of the target language, accurate terminology, and strong attention to detail. The work was delivered on time and required minimal revision. Highly recommended for future projects.”",
+        r12Name: "Asif Khan",
+        r12Role: "Project Manager | ENS Translate (ENS Pvt. Ltd.)",
+        r12Text: "“We have always appreciated the quality and professionalism of your work. Your translations have been accurate, well-aligned with the project requirements, and delivered within the agreed timelines. We have also found your communication and responsiveness to be very good throughout our collaboration. Overall, we are satisfied with your services and appreciate your commitment to maintaining quality standards.”"
       },
       contact: {
         title: "आमच्याशी संपर्क साधा",
@@ -522,7 +528,10 @@ const resources = {
         r10Text: "“Very professional and reliable! Always meets our expectations and deliver quality work..”",
         r11Name: "Mohd. Zaman.(Multi Trans Media) Translations Agency",
         r11Role: "ProZ.com Blue Board MultiTransMedia",
-        r11Text: "“Very professional and reliable linguist. Excellent command of the target language, accurate terminology, and strong attention to detail. The work was delivered on time and required minimal revision. Highly recommended for future projects.”"
+        r11Text: "“Very professional and reliable linguist. Excellent command of the target language, accurate terminology, and strong attention to detail. The work was delivered on time and required minimal revision. Highly recommended for future projects.”",
+        r12Name: "Asif Khan",
+        r12Role: "Project Manager | ENS Translate (ENS Pvt. Ltd.)",
+        r12Text: "“We have always appreciated the quality and professionalism of your work. Your translations have been accurate, well-aligned with the project requirements, and delivered within the agreed timelines. We have also found your communication and responsiveness to be very good throughout our collaboration. Overall, we are satisfied with your services and appreciate your commitment to maintaining quality standards.”"
       },
       contact: {
         title: "संपर्क करें",
@@ -710,7 +719,10 @@ const resources = {
         r10Text: "“Very professional and reliable! Always meets our expectations and deliver quality work..”",
         r11Name: "Mohd. Zaman.(Multi Trans Media) Translations Agency",
         r11Role: "ProZ.com Blue Board MultiTransMedia",
-        r11Text: "“Very professional and reliable linguist. Excellent command of the target language, accurate terminology, and strong attention to detail. The work was delivered on time and required minimal revision. Highly recommended for future projects.”"
+        r11Text: "“Very professional and reliable linguist. Excellent command of the target language, accurate terminology, and strong attention to detail. The work was delivered on time and required minimal revision. Highly recommended for future projects.”",
+        r12Name: "Asif Khan",
+        r12Role: "Project Manager | ENS Translate (ENS Pvt. Ltd.)",
+        r12Text: "“We have always appreciated the quality and professionalism of your work. Your translations have been accurate, well-aligned with the project requirements, and delivered within the agreed timelines. We have also found your communication and responsiveness to be very good throughout our collaboration. Overall, we are satisfied with your services and appreciate your commitment to maintaining quality standards.”"
       },
       contact: {
         title: "Kontaktiere uns",
