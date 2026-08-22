@@ -1,7 +1,7 @@
 .testimonials-section {
   background-color: var(--bg-color-alt);
   padding: 80px 0;
-  border-radius: 40px;
+  border-radius: var(--radius-xl);
   margin: 0 20px;
   overflow: hidden;
   /* Prevent page-level horizontal scrolling */
@@ -45,15 +45,15 @@
   flex: 0 0 100cqw;
   width: 100cqw;
   background-color: var(--bg-color);
-  padding: 35px 50px;
-  border-radius: 24px;
+  padding: 30px 42px;
+  border-radius: var(--radius-lg);
   border: none;
-  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.35s var(--ease-smooth), background 0.35s var(--ease-smooth), box-shadow 0.35s var(--ease-smooth);
 }
 
 .slide:hover {
   background: var(--accent-gradient);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow-md);
   border-color: transparent;
 }
 
@@ -71,10 +71,10 @@
 }
 
 .image-container {
-  width: 70px;
-  height: 70px;
-  min-width: 70px;
-  min-height: 70px;
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
   border-radius: 50%;
   background-color: #ffffff;
   border: 3px solid var(--accent-color);
@@ -105,20 +105,20 @@
 }
 
 .slide h6 {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 4px;
   transition: color 0.3s ease;
 }
 
 .slide-role {
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   color: var(--text-secondary);
   transition: color 0.3s ease;
 }
 
 .slide-content {
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   line-height: 1.5;
   font-weight: 500;
   transition: color 0.3s ease;

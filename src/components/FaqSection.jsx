@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { ChevronDown } from 'lucide-react';
 import './FaqSection.css';
 
 const FaqSection = () => {
@@ -51,9 +52,8 @@ const FaqSection = () => {
               >
                 <div className="faq-question-block">
                   <h6 className="faq-question">{faq.question}</h6>
-                  <div className="plus-icon">
-                    <div className="vertical-line"></div>
-                    <div className="horizontal-line"></div>
+                  <div className="faq-toggle-icon">
+                    <ChevronDown size={20} strokeWidth={2.25} />
                   </div>
                 </div>
                 <div className="faq-answer-block">

@@ -17,13 +17,13 @@
 
 .experience-card {
   background-color: var(--bg-color-alt);
-  padding: 30px 40px;
-  border-radius: 24px;
+  padding: 26px 34px;
+  border-radius: var(--radius-lg);
   display: flex;
   flex-direction: column;
   gap: 12px;
-  border: 1px solid #eaeaea;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  border: 1px solid var(--border-color);
+  transition: transform 0.35s var(--ease-smooth), box-shadow 0.35s var(--ease-smooth), background-color 0.35s var(--ease-smooth), color 0.35s var(--ease-smooth);
 }
 
 .experience-card.first {
@@ -31,7 +31,7 @@
 }
 
 .experience-card.square-card {
-  min-height: 350px;
+  min-height: 305px;
   justify-content: flex-start;
   align-items: flex-start;
   text-align: left;
@@ -39,7 +39,7 @@
 
 .experience-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  box-shadow: var(--shadow-lg);
 }
 
 .experience-card.square-card:hover {
@@ -53,13 +53,13 @@
 }
 
 .exp-title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .exp-desc {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 400;
   color: var(--text-secondary);
   line-height: 1.6;

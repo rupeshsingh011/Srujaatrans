@@ -15,23 +15,25 @@
 }
 
 .faq-item {
-  border-bottom: 1px solid #eaeaea;
+  border-bottom: 1px solid var(--border-color);
   padding: 24px 0;
   cursor: pointer;
+  transition: padding 0.3s var(--ease-smooth);
 }
 
 .faq-item:first-child {
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid var(--border-color);
 }
 
 .faq-question-block {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 
 .faq-question {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 700;
   margin: 0;
   transition: color 0.3s ease;
@@ -41,33 +43,25 @@
   color: var(--accent-color);
 }
 
-.plus-icon {
-  position: relative;
-  width: 24px;
-  height: 24px;
+.faq-toggle-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  color: var(--text-primary);
+  transition: transform 0.35s var(--ease-smooth), background 0.35s var(--ease-smooth),
+    color 0.35s var(--ease-smooth), border-color 0.35s var(--ease-smooth);
 }
 
-.vertical-line, .horizontal-line {
-  position: absolute;
-  background-color: var(--text-primary);
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.vertical-line {
-  width: 2px;
-  height: 14px;
-}
-
-.horizontal-line {
-  width: 14px;
-  height: 2px;
-}
-
-.faq-item.open .vertical-line {
-  transform: rotate(90deg);
+.faq-item.open .faq-toggle-icon {
+  transform: rotate(180deg);
+  background: var(--accent-gradient);
+  border-color: transparent;
+  color: #fff;
 }
 
 .faq-answer-block {
@@ -75,7 +69,7 @@
   overflow: hidden;
   opacity: 0;
   visibility: hidden;
-  transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+  transition: max-height 0.4s var(--ease-smooth), opacity 0.35s var(--ease-smooth), visibility 0.4s var(--ease-smooth);
 }
 
 .faq-item.open .faq-answer-block {
@@ -128,5 +122,5 @@
 
 @media (max-width: 320px) {
   .faq-question { font-size: 0.95rem; }
-  .plus-icon { width: 20px; height: 20px; }
+  .faq-toggle-icon { width: 30px; height: 30px; }
 }

@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './CertificationsSection.css';
-import { 
-  Briefcase, 
-  Building, 
-  Cpu, 
-  Zap, 
-  MessageSquare, 
-  Bot, 
-  Code, 
-  Layers, 
-  FileSpreadsheet, 
-  Sparkles, 
-  PenTool, 
-  Heart, 
+import {
+  Briefcase,
+  Building,
+  Cpu,
+  Zap,
+  MessageSquare,
+  Bot,
+  Code,
+  Layers,
+  FileSpreadsheet,
+  Sparkles,
+  PenTool,
+  Heart,
   Palette,
-  Award
+  Award,
+  X
 } from 'lucide-react';
 
 const CertificationsSection = () => {
@@ -73,7 +74,7 @@ const CertificationsSection = () => {
       {activeModalImage && (
         <div className="image-modal-overlay" onClick={() => setActiveModalImage(null)}>
           <div className="image-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="image-modal-close" onClick={() => setActiveModalImage(null)}>✕</button>
+            <button className="image-modal-close" onClick={() => setActiveModalImage(null)} aria-label="Close"><X size={28} strokeWidth={2} /></button>
             <img src={activeModalImage} alt="Certificate Full" className="image-modal-img" />
           </div>
         </div>

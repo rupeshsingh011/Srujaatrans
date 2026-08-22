@@ -99,19 +99,18 @@
 }
 
 .hero-subtitle {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
   background-color: #ffffff;
   padding: 8px 16px;
-  border-radius: 50px;
-  display: inline-flex;
+  border-radius: var(--radius-pill);
   font-weight: 500;
   font-size: 0.9rem;
   margin-top: -100px;
   margin-bottom: 30px;
-  border: 1px solid #eaeaea;
-  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+  transition: transform 0.35s var(--ease-smooth), box-shadow 0.35s var(--ease-smooth), background 0.35s var(--ease-smooth), color 0.35s var(--ease-smooth);
   cursor: default;
 }
 
@@ -119,8 +118,15 @@
   background: var(--accent-gradient);
   border-color: transparent;
   color: #fff;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow-md);
   transform: translateY(-2px);
+}
+
+.hero-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  width: 50%;
+  margin: 0 0 15px 0;
 }
 
 .status-dot-wrap {
@@ -141,7 +147,7 @@
 }
 
 .hero-heading {
-  font-size: 5rem;
+  font-size: 4.25rem;
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 12px;
@@ -173,7 +179,7 @@
 }
 
 .hero-description {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #ffffff;
   /* Changed to white per user request */
   margin-bottom: 20px;
@@ -196,11 +202,11 @@
   width: 50px;
   height: 50px;
   background-color: #fff;
-  border-radius: 12px;
+  border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #eaeaea;
+  border: 1px solid var(--border-color);
 }
 
 .hero-center {
@@ -248,7 +254,7 @@
 }
 
 .exp-years {
-  font-size: 4rem;
+  font-size: 3.4rem;
   font-weight: 800;
   line-height: 1;
   margin: 0;
@@ -257,7 +263,7 @@
 }
 
 .exp-text {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #ffffff;
   font-weight: 500;
   text-shadow: none;
@@ -273,9 +279,9 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  transition: all 0.3s ease;
+  transition: transform 0.35s var(--ease-smooth), background 0.35s var(--ease-smooth), box-shadow 0.35s var(--ease-smooth);
   padding: 10px;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   margin-left: -10px;
   /* offset the padding so it visually aligns */
 }
@@ -287,7 +293,7 @@
 }
 
 .award-card h6 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
   margin-bottom: 4px;
   color: #ffffff !important;
@@ -296,7 +302,7 @@
 }
 
 .award-desc {
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   color: #ffffff !important;
   margin: 0;
   line-height: 1.4;
@@ -340,7 +346,7 @@
   }
 
   .hero-heading {
-    font-size: 3rem;
+    font-size: 2.6rem;
   }
 
   .hero-experience {
@@ -360,7 +366,7 @@
   }
 
   .hero-heading {
-    font-size: 2.5rem;
+    font-size: 2.15rem;
   }
 
   .hero-skills {
@@ -369,7 +375,7 @@
   }
 
   .hero-email {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 
@@ -379,11 +385,11 @@
   }
 
   .hero-heading {
-    font-size: 2.3rem;
+    font-size: 2rem;
   }
 
   .exp-years {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   .award-card {
@@ -394,30 +400,30 @@
 
 @media (max-width: 375px) {
   .hero-heading {
-    font-size: 2.1rem;
+    font-size: 1.85rem;
   }
 
   .hero-subtitle {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     padding: 6px 14px;
   }
 
   .hero-email {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .exp-years {
-    font-size: 3rem;
+    font-size: 2.6rem;
   }
 }
 
 @media (max-width: 320px) {
   .hero-heading {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .hero-description {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .hero-container {
@@ -453,7 +459,7 @@
   position: relative;
   background: transparent;
   padding: 10px;
-  border-radius: 12px;
+  border-radius: var(--radius-sm);
   max-width: 90vw;
   max-height: 90vh;
   display: flex;
@@ -465,18 +471,27 @@
   max-width: 100%;
   max-height: calc(90vh - 20px);
   object-fit: contain;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   opacity: 1;
   transform: none;
 }
 
 .image-modal-close {
   position: absolute;
-  top: -40px;
+  top: -44px;
   right: 0;
   background: none;
   border: none;
   color: #fff;
-  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  transition: transform 0.3s var(--ease-smooth), opacity 0.3s ease;
+  opacity: 0.85;
+}
+
+.image-modal-close:hover {
+  opacity: 1;
+  transform: scale(1.1);
 }

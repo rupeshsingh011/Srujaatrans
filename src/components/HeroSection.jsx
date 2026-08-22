@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { X } from 'lucide-react';
 import './HeroSection.css';
 
 const HeroSection = () => {
@@ -29,7 +30,7 @@ const HeroSection = () => {
               ))}
             </h1>
             <p className="hero-description" dangerouslySetInnerHTML={{ __html: t('hero.description') }}></p>
-            <hr style={{ border: 'none', borderTop: '1px solid #eaeaea', width: '50%', margin: '0 0 15px 0', marginLeft: '0' }} />
+            <hr className="hero-divider" />
             <div className="hero-awards">
               <div className="award-card" onClick={() => setActiveModalImage('CTP.png')} style={{ cursor: 'pointer' }}>
                 <div>
@@ -62,7 +63,7 @@ const HeroSection = () => {
       {activeModalImage && (
         <div className="image-modal-overlay" onClick={() => setActiveModalImage(null)}>
           <div className="image-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="image-modal-close" onClick={() => setActiveModalImage(null)}>✕</button>
+            <button className="image-modal-close" onClick={() => setActiveModalImage(null)} aria-label="Close"><X size={28} strokeWidth={2} /></button>
             <img src={activeModalImage} alt="Certificate Full" className="image-modal-img" />
           </div>
         </div>

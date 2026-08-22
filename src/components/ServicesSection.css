@@ -1,7 +1,7 @@
 .services-section {
   background-color: var(--bg-color-alt);
   padding: 80px 0 80px 0;
-  border-radius: 40px;
+  border-radius: var(--radius-xl);
   margin: 15px 20px 0;
 }
 
@@ -23,18 +23,19 @@
 
 .service-card {
   background-color: var(--bg-color);
-  padding: 24px 20px;
-  border-radius: 20px;
+  padding: 20px 18px;
+  border-radius: var(--radius-md);
   display: flex;
   flex-direction: column;
   gap: 16px;
-  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid transparent;
+  transition: transform 0.35s var(--ease-smooth), background 0.35s var(--ease-smooth), box-shadow 0.35s var(--ease-smooth);
 }
 
 .service-card:hover {
   background: var(--accent-gradient);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-6px);
   border-color: transparent;
 }
 
@@ -43,27 +44,34 @@
   color: #fff;
 }
 
+.service-card:hover .service-icon {
+  color: #fff;
+  border-color: transparent;
+}
+
 .service-icon {
-  width: 48px;
-  height: 48px;
+  width: 42px;
+  height: 42px;
   background-color: #fff;
-  border-radius: 12px;
+  border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #eaeaea;
+  border: 1px solid var(--border-color);
+  color: var(--accent-color);
+  transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 .service-title {
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   transition: color 0.3s ease;
 }
 
 .service-card p {
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   line-height: 1.5;
   transition: color 0.3s ease;
 }

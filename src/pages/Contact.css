@@ -1,5 +1,19 @@
+.contact-page-main {
+  margin-top: 80px;
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
 .contact-page-section {
   padding: 120px 0;
+}
+
+.contact-page-section-flush {
+  padding: 0;
+  width: 100%;
 }
 
 .contact-page-container {
@@ -28,7 +42,7 @@
 }
 
 .contact-data {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 700;
   transition: color 0.3s ease;
 }
@@ -43,9 +57,9 @@
 
 .contact-outer {
   background-color: var(--bg-color-alt);
-  padding: 40px;
-  border-radius: 40px;
-  border: 1px solid rgba(121, 112, 216, 0.1);
+  padding: 34px;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-color-strong);
   box-shadow: 0 0 40px rgba(121, 112, 216, 0.15);
 }
 
@@ -66,24 +80,30 @@
 }
 
 .field-label {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 600;
 }
 
 .text-field {
   width: 100%;
-  padding: 16px 20px;
-  border: 1px solid #eaeaea;
-  border-radius: 12px;
+  padding: 14px 18px;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-sm);
   background-color: var(--bg-color);
   font-family: inherit;
   font-size: 1rem;
+  color: var(--text-primary);
   outline: none;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s var(--ease-smooth), box-shadow 0.3s var(--ease-smooth);
+}
+
+.text-field:hover {
+  border-color: var(--border-color-strong);
 }
 
 .text-field:focus {
   border-color: var(--accent-color);
+  box-shadow: 0 0 0 4px rgba(121, 112, 216, 0.15);
 }
 
 .text-field.message {
@@ -91,9 +111,41 @@
   resize: vertical;
 }
 
+.phone-field-group {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.country-code-field {
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.text-field.phone {
+  flex: 1;
+  min-width: 0;
+  width: auto;
+}
+
 .form-submit {
   grid-column: span 2;
   margin-top: 10px;
+}
+
+.form-status {
+  grid-column: span 2;
+  margin-top: 15px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.form-status.success {
+  color: #1a9e5c;
+}
+
+.form-status.error {
+  color: #d64545;
 }
 
 @media (max-width: 991px) {
@@ -106,16 +158,16 @@
   .contact-outer {
     padding: 30px;
   }
-  
+
   .form {
     grid-template-columns: 1fr;
   }
-  
+
   .form-inner {
     grid-column: span 1;
   }
-  
-  .form-inner.full-width, .form-submit {
+
+  .form-inner.full-width, .form-submit, .form-status {
     grid-column: span 1;
   }
 }

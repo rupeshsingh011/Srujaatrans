@@ -22,13 +22,13 @@
   align-items: center;
   background-color: var(--bg-color-alt);
   padding: 20px 30px;
-  border-radius: 50px;
+  border-radius: var(--radius-pill);
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--text-primary);
   font-size: 1.1rem;
   font-weight: 500;
-  border: 1px solid #eaeaea;
-  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+  transition: transform 0.35s var(--ease-smooth), background 0.35s var(--ease-smooth), box-shadow 0.35s var(--ease-smooth), color 0.35s var(--ease-smooth);
 }
 
 .strip-arrow {
@@ -41,7 +41,7 @@
   background: var(--accent-gradient);
   color: #fff;
   transform: translateX(12px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-md);
 }
 
 .work-strip-card:hover .strip-arrow {
