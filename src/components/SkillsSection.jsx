@@ -1,10 +1,11 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { useContent, useSiteContent } from '../context/SiteContentContext.jsx';
 import './SkillsSection.css';
-import { getSkillIcon } from './SkillIcons';
 
 const SkillsSection = () => {
-  const { t } = useTranslation();
+  const t = useContent();
+  const { lists } = useSiteContent();
+
   return (
     <section className="skills-section bg-background-1" id="skills">
       <div className="container skills-container">
@@ -19,26 +20,26 @@ const SkillsSection = () => {
 
         <div className="skills-right">
           <div className="skills-grid translation-grid">
-            {[
-              'SDL Trados Studio', 'Wordfast', 'Translation Workspace', 'InDesign',
-              'Xbench', 'Envelope', 'Xliff Editor', 'ISM, etc...',
-              'Across', 'MemoQ', 'Coach', 'Phrase', 'Matecat'
-            ].map((tool, index) => {
-              return (
-                <div
-                  className="skill-card-lg"
-                  key={tool}
-                  style={['Translation Workspace', 'Envelope', 'ISM, etc...', 'Coach'].includes(tool) ? { width: 'calc(100% + 10px)' } : {}}
-                >
-                  <div className="skill-icon-lg">
-                    {getSkillIcon(tool)}
-                  </div>
-                  <div className="skill-details">
-                    <div className="skill-name">{tool}</div>
-                  </div>
+            {lists.skills.map((skill) => (
+              <div className="skill-card-lg" key={skill._id}>
+                <div className="skill-icon-lg">
+                  {skill.image ? (
+                    <img
+                      src={skill.image}
+                      alt={skill.name}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '18px' }}
+                    />
+                  ) : (
+                    <svg viewBox="0 0 64 64" fill="none" style={{ width: '100%', height: '100%' }}>
+                      <circle cx="32" cy="32" r="28" fill="#eaeaea" />
+                    </svg>
+                  )}
                 </div>
-              );
-            })}
+                <div className="skill-details">
+                  <div className="skill-name">{skill.name}</div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

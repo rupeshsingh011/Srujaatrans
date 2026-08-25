@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import { X } from 'lucide-react';
+import { useContent } from '../context/SiteContentContext.jsx';
 import './HeroSection.css';
 
 const HeroSection = () => {
-  const { t } = useTranslation();
+  const t = useContent();
   const [activeModalImage, setActiveModalImage] = useState(null);
 
   return (

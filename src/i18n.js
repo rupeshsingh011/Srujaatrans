@@ -2,7 +2,9 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-const resources = {
+// Exported so the site-content admin system can seed the database with
+// this text and fall back to it if the API is unreachable.
+export const resources = {
   en: {
     translation: {
       nav: {

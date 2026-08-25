@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import { useContent } from '../context/SiteContentContext.jsx';
 import {
   CheckCircle2,
   Globe2,
@@ -15,7 +15,7 @@ import {
 import './AboutSection.css';
 
 const AboutSection = () => {
-  const { t } = useTranslation();
+  const t = useContent();
   return (
     <section className="about-section" id="about">
       <div className="container about-container">

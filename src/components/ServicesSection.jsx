@@ -1,10 +1,10 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import { Languages, BookOpenCheck, Captions, Globe } from 'lucide-react';
+import { useContent } from '../context/SiteContentContext.jsx';
 import './ServicesSection.css';
 
 const ServicesSection = () => {
-  const { t } = useTranslation();
+  const t = useContent();
   return (
     <section className="services-section" id="services">
       <div className="container services-container">

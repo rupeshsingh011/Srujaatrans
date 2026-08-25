@@ -1,15 +1,26 @@
 const express = require('express');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
+const path = require('path');
 require('dotenv').config();
 const mongoose = require('mongoose');
 const Contact = require('./models/Contact');
+
+const authRoutes = require('./routes/auth');
+const uploadRoutes = require('./routes/upload');
+const siteContentRoutes = require('./routes/siteContent');
+const makeListRouter = require('./routes/makeListRouter');
+const Review = require('./models/Review');
+const WorkItem = require('./models/WorkItem');
+const Certification = require('./models/Certification');
+const Skill = require('./models/Skill');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // MongoDB Connection
 const MONGODB_URI = process.env.MONGODB_URI;
@@ -76,6 +87,14 @@ app.post('/api/contact', async (req, res) => {
     res.status(500).json({ success: false, error: 'Failed to process request. Please try again later.' });
   }
 });
+
+app.use('/api/admin', authRoutes);
+app.use('/api/upload', uploadRoutes);
+app.use('/api/site-content', siteContentRoutes);
+app.use('/api/reviews', makeListRouter(Review));
+app.use('/api/work-items', makeListRouter(WorkItem));
+app.use('/api/certifications', makeListRouter(Certification));
+app.use('/api/skills', makeListRouter(Skill));
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

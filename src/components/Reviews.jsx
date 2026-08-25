@@ -1,109 +1,20 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useContent, useSiteContent } from '../context/SiteContentContext.jsx';
 import './Reviews.css';
 
-import martaImg from '../assets/Marta_Esteban.jpg';
-import georgiImg from '../assets/Georgi.png';
-import elanguageImg from '../assets/eLanguageWorld.png';
-import denverImg from '../assets/denver.jpg';
-import iconicImg from '../assets/iconic.jpg';
-import lcImg from '../assets/lc.jpg';
-import saudisoftImg from '../assets/saudisoft.png';
-import tradoonImg from '../assets/tradoon.jpg';
-import vokianImg from '../assets/vokian.jpg';
-import devdattaImg from '../assets/Devdatta.gif';
-import multitranmediaImg from '../assets/multitranmedia.png';
-import emcImg from '../assets/emc.jpg';
-
-const reviewsData = [
-  {
-    id: 1,
-    nameKey: 'reviews.r1Name',
-    roleKey: 'reviews.r1Role',
-    image: martaImg,
-    textKey: 'reviews.r1Text'
-  },
-  {
-    id: 2,
-    nameKey: 'reviews.r2Name',
-    roleKey: 'reviews.r2Role',
-    image: georgiImg,
-    textKey: 'reviews.r2Text'
-  },
-  {
-    id: 3,
-    nameKey: 'reviews.r3Name',
-    roleKey: 'reviews.r3Role',
-    image: elanguageImg,
-    textKey: 'reviews.r3Text'
-  },
-  {
-    id: 4,
-    nameKey: 'reviews.r4Name',
-    roleKey: 'reviews.r4Role',
-    image: saudisoftImg,
-    textKey: 'reviews.r4Text'
-  },
-  {
-    id: 5,
-    nameKey: 'reviews.r5Name',
-    roleKey: 'reviews.r5Role',
-    image: lcImg,
-    textKey: 'reviews.r5Text'
-  },
-  {
-    id: 6,
-    nameKey: 'reviews.r6Name',
-    roleKey: 'reviews.r6Role',
-    image: devdattaImg,
-    textKey: 'reviews.r6Text'
-  },
-  {
-    id: 7,
-    nameKey: 'reviews.r7Name',
-    roleKey: 'reviews.r7Role',
-    image: iconicImg,
-    textKey: 'reviews.r7Text'
-  },
-  {
-    id: 8,
-    nameKey: 'reviews.r8Name',
-    roleKey: 'reviews.r8Role',
-    image: tradoonImg,
-    textKey: 'reviews.r8Text'
-  },
-  {
-    id: 9,
-    nameKey: 'reviews.r9Name',
-    roleKey: 'reviews.r9Role',
-    image: denverImg,
-    textKey: 'reviews.r9Text'
-  },
-  {
-    id: 10,
-    nameKey: 'reviews.r10Name',
-    roleKey: 'reviews.r10Role',
-    image: vokianImg,
-    textKey: 'reviews.r10Text'
-  },
-  {
-    id: 11,
-    nameKey: 'reviews.r11Name',
-    roleKey: 'reviews.r11Role',
-    image: multitranmediaImg,
-    textKey: 'reviews.r11Text'
-  },
-  {
-    id: 12,
-    nameKey: 'reviews.r12Name',
-    roleKey: 'reviews.r12Role',
-    image: emcImg,
-    textKey: 'reviews.r12Text'
-  }
-];
-
 const Reviews = () => {
-  const { t } = useTranslation();
+  const t = useContent();
+  const { i18n } = useTranslation();
+  const lang = (i18n.language || 'en').split('-')[0];
+  const { lists } = useSiteContent();
+  const reviewsData = lists.reviews.map((r) => ({
+    id: r._id,
+    name: r.name,
+    role: r.role?.[lang] || r.role?.en || '',
+    image: r.image,
+    text: r.text?.[lang] || r.text?.en || '',
+  }));
 
   return (
     <section className="testimonials-section bg-background-1" id="reviews">
@@ -128,12 +39,12 @@ const Reviews = () => {
                         {review.image ? <img src={review.image} alt="User" /> : <div className="placeholder-avatar">U</div>}
                       </div>
                       <div>
-                        <h6>{t(review.nameKey)}</h6>
-                        <div className="slide-role">{t(review.roleKey)}</div>
+                        <h6>{review.name}</h6>
+                        <div className="slide-role">{review.role}</div>
                       </div>
                     </div>
                     <div className="slide-content">
-                      {t(review.textKey)}
+                      {review.text}
                     </div>
                   </div>
                 </div>

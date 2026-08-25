@@ -13,6 +13,10 @@ dist-ssr
 .env
 *.local
 
+# Admin-uploaded images (served by the Express server, not part of the app bundle)
+server/uploads/*
+!server/uploads/.gitkeep
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

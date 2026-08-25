@@ -1,9 +1,11 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { useContent } from '../context/SiteContentContext.jsx';
 import './Companies.css';
 
 const Companies = () => {
-  const { t } = useTranslation();
+  const t = useContent();
+  const logo1 = t('companies.logo1Url') || '/logo_proz.png';
+  const logo2 = t('companies.logo2Url') || '/logo_tc.png';
   return (
     <section className="awards-section">
       <div className="container awards-container">
@@ -21,7 +23,7 @@ const Companies = () => {
             <div className="award-card-lg">
               <div className="award-inner">
                 <div className="award-icon-lg">
-                  <img src="/logo_proz.png" alt="ProZ.com" className="award-logo-img" />
+                  <img src={logo1} alt="ProZ.com" className="award-logo-img" />
                 </div>
                 <div className="award-info">
                   <h5 className="award-title">{t('companies.c1Title')}</h5>
@@ -36,7 +38,7 @@ const Companies = () => {
             <div className="award-card-lg">
               <div className="award-inner">
                 <div className="award-icon-lg">
-                  <img src="/logo_tc.png" alt="TranslatorsCafe" className="award-logo-img" />
+                  <img src={logo2} alt="TranslatorsCafe" className="award-logo-img" />
                 </div>
                 <div className="award-info">
                   <h5 className="award-title">{t('companies.c2Title')}</h5>

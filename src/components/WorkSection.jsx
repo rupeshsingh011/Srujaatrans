@@ -1,9 +1,14 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useContent, useSiteContent } from '../context/SiteContentContext.jsx';
 import './WorkSection.css';
 
 const WorkSection = () => {
-  const { t } = useTranslation();
+  const t = useContent();
+  const { i18n } = useTranslation();
+  const lang = (i18n.language || 'en').split('-')[0];
+  const { lists } = useSiteContent();
+
   return (
     <section className="section work-section" id="work">
       <div className="container work-container">
@@ -18,30 +23,12 @@ const WorkSection = () => {
 
         <div className="work-right">
           <div className="work-strips-list">
-            <a href="/100 Great Inspiring Stories by G Francis Xavier_ENG.jpg" className="work-strip-card">
-              <span>{t('work.b1')}</span>
-              <span className="strip-arrow">→</span>
-            </a>
-            <a href="/Garma-garam-chivda_MAR.jpg" className="work-strip-card">
-              <span>{t('work.b2')}</span>
-              <span className="strip-arrow">→</span>
-            </a>
-            <a href="/Tales of Shakespeare_Charles and Merry Lamb_ENG.png" className="work-strip-card">
-              <span>{t('work.b3')}</span>
-              <span className="strip-arrow">→</span>
-            </a>
-            <a href="/Tales of Shakespeare_Charles and Merry Lamb_MAR.png" className="work-strip-card">
-              <span>{t('work.b4')}</span>
-              <span className="strip-arrow">→</span>
-            </a>
-            <a href="/The Little Black Book for Stunning Success_ENG.jpg" className="work-strip-card">
-              <span>{t('work.b5')}</span>
-              <span className="strip-arrow">→</span>
-            </a>
-            <a href="/The Little Black Book for Stunning Success_MAR.png" className="work-strip-card">
-              <span>{t('work.b6')}</span>
-              <span className="strip-arrow">→</span>
-            </a>
+            {lists.workItems.map((item) => (
+              <a key={item._id} href={item.image} className="work-strip-card" target="_blank" rel="noopener noreferrer">
+                <span>{item.title?.[lang] || item.title?.en || ''}</span>
+                <span className="strip-arrow">→</span>
+              </a>
+            ))}
           </div>
         </div>
       </div>

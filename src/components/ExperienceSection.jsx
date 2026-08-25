@@ -1,9 +1,9 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { useContent } from '../context/SiteContentContext.jsx';
 import './ExperienceSection.css';
 
 const ExperienceSection = () => {
-  const { t } = useTranslation();
+  const t = useContent();
   return (
     <section className="experience-section" id="experience">
       <div className="container experience-container">

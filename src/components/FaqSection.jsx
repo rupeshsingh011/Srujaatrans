@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import { ChevronDown } from 'lucide-react';
+import { useContent } from '../context/SiteContentContext.jsx';
 import './FaqSection.css';
 
 const FaqSection = () => {
-  const { t } = useTranslation();
+  const t = useContent();
   const [openIndex, setOpenIndex] = useState(0);
 
   const faqs = [
