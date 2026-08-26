@@ -2,11 +2,11 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "https://server-production-16ae.up.railway.app/api/$1"
+      "destination": "https://srujaatrans-server.onrender.com/api/$1"
     },
     {
       "source": "/uploads/(.*)",
-      "destination": "https://server-production-16ae.up.railway.app/uploads/$1"
+      "destination": "https://srujaatrans-server.onrender.com/uploads/$1"
     },
     {
       "source": "/(.*)",

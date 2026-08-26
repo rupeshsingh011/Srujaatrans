@@ -7,11 +7,11 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://server-production-16ae.up.railway.app',
+        target: 'https://srujaatrans-server.onrender.com',
         changeOrigin: true,
       },
       '/uploads': {
-        target: 'https://server-production-16ae.up.railway.app',
+        target: 'https://srujaatrans-server.onrender.com',
         changeOrigin: true,
       },
     },
