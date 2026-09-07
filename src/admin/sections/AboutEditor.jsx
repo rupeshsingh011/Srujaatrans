@@ -26,8 +26,7 @@ const fields = [
   { key: 'h6_title', label: 'Language pairs — title' },
   { key: 'h4_bold', label: 'Domain expertise — bold part' },
   { key: 'h4_desc', label: 'Domain expertise — description' },
-  { key: 'h7_bold', label: 'CAT tools — bold part' },
-  { key: 'h7_desc', label: 'CAT tools — description' },
+
   { key: 'h9_bold', label: 'Professional commitment — bold part' },
   { key: 'h9_desc', label: 'Professional commitment — description' },
   { key: 'outro', label: 'Closing paragraph', multiline: true },
