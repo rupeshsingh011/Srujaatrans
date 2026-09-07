@@ -91,10 +91,7 @@ const AboutSection = () => {
                   <span className="icon"><LayoutGrid size={18} strokeWidth={2.25} /></span>
                   <div><strong>{t('about.h4_bold')}</strong> {t('about.h4_desc')}</div>
                 </li>
-                <li>
-                  <span className="icon"><Wrench size={18} strokeWidth={2.25} /></span>
-                  <div><strong>{t('about.h7_bold')}</strong> {t('about.h7_desc')}</div>
-                </li>
+
                 <li>
                   <span className="icon"><Award size={18} strokeWidth={2.25} /></span>
                   <div><strong>{t('about.h9_bold')}</strong> {t('about.h9_desc')}</div>

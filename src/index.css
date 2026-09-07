@@ -51,7 +51,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
-  /* 16px */
+  overflow-x: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 h1,
@@ -125,7 +127,12 @@ ul {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1vw;
-  /* Webflow standard dynamic padding */
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1360px;
+  }
 }
 
 .section {

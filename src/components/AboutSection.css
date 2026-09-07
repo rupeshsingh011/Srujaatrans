@@ -65,7 +65,8 @@
 }
 
 .about-list>li>strong {
-  white-space: nowrap;
+  word-break: break-word;
+  min-width: 120px;
 }
 
 .about-list .icon {

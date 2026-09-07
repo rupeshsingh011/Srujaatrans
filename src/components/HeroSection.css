@@ -25,6 +25,14 @@
   pointer-events: none;
 }
 
+@media (max-width: 768px) {
+  .hero-bg-logo {
+    max-width: 80%;
+    right: -10%;
+    opacity: 0.3; /* Make it subtle so text is readable */
+  }
+}
+
 .hero-wave {
   position: absolute;
   bottom: 0;
@@ -88,7 +96,7 @@
 }
 
 .hero-left {
-  max-width: 650px;
+  max-width: 850px;
   margin-right: 40px;
   margin-top: 0px;
   margin-left: 30px;
@@ -106,8 +114,8 @@
   padding: 8px 16px;
   border-radius: var(--radius-pill);
   font-weight: 500;
-  font-size: 0.9rem;
-  margin-top: -100px;
+  font-size: 1.1rem;
+  margin-top: 0px;
   margin-bottom: 30px;
   border: 1px solid var(--border-color);
   transition: transform 0.35s var(--ease-smooth), box-shadow 0.35s var(--ease-smooth), background 0.35s var(--ease-smooth), color 0.35s var(--ease-smooth);
@@ -147,7 +155,7 @@
 }
 
 .hero-heading {
-  font-size: 4.25rem;
+  font-size: 4.8rem;
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 12px;
@@ -179,7 +187,7 @@
 }
 
 .hero-description {
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: #ffffff;
   /* Changed to white per user request */
   margin-bottom: 20px;
@@ -293,7 +301,7 @@
 }
 
 .award-card h6 {
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 4px;
   color: #ffffff !important;
@@ -302,7 +310,7 @@
 }
 
 .award-desc {
-  font-size: 0.82rem;
+  font-size: 1.05rem;
   color: #ffffff !important;
   margin: 0;
   line-height: 1.4;
@@ -311,48 +319,28 @@
 
 @media (max-width: 1024px) {
   .hero-container {
-    grid-template-columns: 1fr 1fr;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 5vw;
+    padding-right: 5vw;
     gap: 40px;
   }
 
-  .hero-right {
-    grid-column: span 2;
-  }
-
-  .hero-experience {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .exp-stats {
-    border-bottom: none;
-    padding-bottom: 0;
-    flex-direction: row;
-    align-items: center;
-    gap: 15px;
+  .hero-left {
+    max-width: 100%;
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 
 @media (max-width: 768px) {
   .hero-container {
-    grid-template-columns: 1fr;
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  .hero-right {
-    grid-column: span 1;
-  }
-
   .hero-heading {
     font-size: 2.6rem;
-  }
-
-  .hero-experience {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 30px;
   }
 
   .hero-left {

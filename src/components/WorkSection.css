@@ -5,47 +5,137 @@
 
 .work-container {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 2.5fr;
   gap: 60px;
 }
 
-.work-strips-list {
+.work-left {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  align-items: flex-start;
+}
+
+.work-pill-outer {
+  border: 1px solid var(--border-color);
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+.work-pill {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  letter-spacing: 0.05em;
+}
+
+.work-heading {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  color: var(--accent-color);
+  margin-bottom: 24px;
+}
+
+.work-desc {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.work-illustration {
+  width: 100%;
+  max-width: 300px;
+  border-radius: var(--radius-md);
+  margin-top: auto;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
   width: 100%;
 }
 
-.work-strip-card {
+.work-grid-card {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--bg-color-alt);
-  padding: 20px 30px;
-  border-radius: var(--radius-pill);
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: var(--radius-lg);
   text-decoration: none;
   color: var(--text-primary);
-  font-size: 1.1rem;
-  font-weight: 500;
   border: 1px solid var(--border-color);
-  transition: transform 0.35s var(--ease-smooth), background 0.35s var(--ease-smooth), box-shadow 0.35s var(--ease-smooth), color 0.35s var(--ease-smooth);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  transition: transform 0.35s var(--ease-smooth), box-shadow 0.35s var(--ease-smooth);
+  overflow: hidden;
 }
 
-.strip-arrow {
-  font-size: 1.5rem;
-  opacity: 0.5;
-  transition: opacity 0.3s ease;
-}
-
-.work-strip-card:hover {
-  background: var(--accent-gradient);
-  color: #fff;
-  transform: translateX(12px);
+.work-grid-card:hover {
+  transform: translateY(-8px);
   box-shadow: var(--shadow-md);
 }
 
-.work-strip-card:hover .strip-arrow {
-  opacity: 1;
+.work-card-img-wrap {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.work-card-img {
+  max-width: 100%;
+  height: 200px;
+  object-fit: contain;
+  transition: transform 0.35s var(--ease-smooth);
+}
+
+.work-grid-card:hover .work-card-img {
+  transform: scale(1.05);
+}
+
+.work-card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.work-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.work-card-tag {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: 12px;
+}
+
+.work-card-arrow {
+  font-size: 1.4rem;
+  color: var(--accent-color);
+  transition: transform 0.3s ease;
+  margin-top: auto;
+}
+
+.work-grid-card:hover .work-card-arrow {
+  transform: translateX(5px);
+}
+
+@media (max-width: 1200px) {
+  .work-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 991px) {
@@ -53,12 +143,16 @@
     grid-template-columns: 1fr;
     gap: 40px;
   }
+  .work-left {
+    align-items: center;
+    text-align: center;
+  }
+  .work-heading br {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
   .work-section {
     padding: 60px 0;
     margin: 0 10px;
@@ -66,16 +160,13 @@
 }
 
 @media (max-width: 480px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
   .work-section { padding: 40px 0; }
-  .work-strip-card { padding: 15px 20px; font-size: 1rem; border-radius: 20px; }
 }
 
 @media (max-width: 375px) {
   .work-section { padding: 30px 0; }
-  .work-strip-card { padding: 12px 16px; font-size: 0.9rem; }
-}
-
-@media (max-width: 320px) {
-  .work-strip-card { padding: 10px 12px; font-size: 0.85rem; border-radius: 16px; }
-  .strip-arrow { font-size: 1.2rem; }
+  .work-heading { font-size: 2.8rem; }
 }

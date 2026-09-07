@@ -593,7 +593,7 @@ export const resources = {
       hero: {
         name: "Hi, I'm Mugdha",
         available: "Verfügbar",
-        description: "Hallo, ich bin eine zertifizierte Übersetzerin mit über 14 Jahren Erfahrung,<br/>die präzise mehrsprachige Übersetzungen, Lektorat, Untertitelung <br/>und Lokalisierung für globale <br/>Kunden liefert.",
+        description: "Hallo, ich bin eine zertifizierte Übersetzerin mit über 14 Jahren Erfahrung, die präzise mehrsprachige Übersetzungen, Lektorat, <br/>Untertitelung <br/>und Lokalisierung für globale <br/>Kunden liefert.",
         years: "Jahre",
         ofExperience: "Erfahrung",
         ctpDesc: "Zertifizierter Übersetzungsprofi",
