@@ -3,11 +3,19 @@ services:
     name: srujaatrans-server
     runtime: node
     rootDir: server
-    plan: free
+    # Persistent disks require a paid plan — "free" does not support the
+    # `disks` block below. Uploaded images are stored on this disk so they
+    # survive restarts/redeploys instead of living on the ephemeral
+    # container filesystem.
+    plan: starter
     buildCommand: npm install
     startCommand: npm start
     healthCheckPath: /
     autoDeploy: true
+    disks:
+      - name: uploads
+        mountPath: /var/data/uploads
+        sizeGB: 1
     envVars:
       - key: MONGODB_URI
         sync: false
@@ -21,3 +29,5 @@ services:
         sync: false
       - key: JWT_SECRET
         sync: false
+      - key: UPLOAD_DIR
+        value: /var/data/uploads

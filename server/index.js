@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
 const path = require('path');
+const fs = require('fs');
 require('dotenv').config();
 const mongoose = require('mongoose');
 const Contact = require('./models/Contact');
@@ -18,9 +19,36 @@ const Skill = require('./models/Skill');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// UPLOAD_DIR should point at Render's mounted persistent disk in production
+// (e.g. /var/data/uploads) so admin-uploaded images survive restarts and
+// redeploys. The repo's server/uploads/ folder is the source of truth for
+// the seed images that ship with the code; on first boot with a fresh
+// (empty) persistent disk we copy those seeds over so nothing appears
+// missing before an admin re-uploads anything.
+const REPO_UPLOADS_DIR = path.join(__dirname, 'uploads');
+const UPLOAD_DIR = process.env.UPLOAD_DIR || REPO_UPLOADS_DIR;
+
+fs.mkdirSync(UPLOAD_DIR, { recursive: true });
+if (path.resolve(UPLOAD_DIR) !== path.resolve(REPO_UPLOADS_DIR)) {
+  try {
+    const existing = fs.readdirSync(UPLOAD_DIR).filter((f) => f !== '.gitkeep');
+    if (existing.length === 0) {
+      const seeds = fs.readdirSync(REPO_UPLOADS_DIR).filter((f) => f !== '.gitkeep');
+      for (const file of seeds) {
+        fs.copyFileSync(path.join(REPO_UPLOADS_DIR, file), path.join(UPLOAD_DIR, file));
+      }
+      if (seeds.length > 0) {
+        console.log(`Seeded ${seeds.length} file(s) into empty UPLOAD_DIR (${UPLOAD_DIR}).`);
+      }
+    }
+  } catch (err) {
+    console.error('Failed to seed UPLOAD_DIR from repo uploads/:', err.message);
+  }
+}
+
 app.use(cors());
 app.use(express.json());
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use('/uploads', express.static(UPLOAD_DIR));
 
 app.get('/', (req, res) => {
   res.json({ status: 'ok', message: 'Srujaatrans API is running' });

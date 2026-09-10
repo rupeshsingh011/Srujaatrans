@@ -6,7 +6,11 @@ const { requireAdmin } = require('../middleware/auth');
 
 const router = express.Router();
 
-const UPLOAD_DIR = path.join(__dirname, '..', 'uploads');
+// On Render, UPLOAD_DIR should point at the mounted persistent disk (e.g.
+// /var/data/uploads) so uploaded files survive restarts/redeploys — the
+// default here is only for local dev, where the repo's own uploads/ folder
+// (which also ships the seed images) is fine to write into directly.
+const UPLOAD_DIR = process.env.UPLOAD_DIR || path.join(__dirname, '..', 'uploads');
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => cb(null, UPLOAD_DIR),
