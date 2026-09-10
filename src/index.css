@@ -2,7 +2,8 @@
 
 :root {
   --bg-color: #ffffff;
-  --bg-color-alt: #f3f1fb; /* Very light purple shade */
+  --bg-color-alt: #f3f1fb;
+  /* Very light purple shade */
   --text-primary: #1a1a1a;
   --text-secondary: #666666;
   --accent-color: #7970d8;
@@ -270,50 +271,120 @@ img.active,
 }
 
 @media (max-width: 1024px) {
-  h1 { font-size: 3.85rem; }
-  h2 { font-size: 3rem; }
-  .section { padding: 70px 0; }
+  h1 {
+    font-size: 3.85rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  .section {
+    padding: 70px 0;
+  }
 }
 
 @media (max-width: 768px) {
-  h1 { font-size: 3rem; }
-  h2 { font-size: 2.4rem; }
-  h3 { font-size: 1.9rem; }
-  h4 { font-size: 1.55rem; }
-  .section { padding: 52px 0; }
-  .container { padding: 0 5vw; }
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  h3 {
+    font-size: 1.9rem;
+  }
+
+  h4 {
+    font-size: 1.55rem;
+  }
+
+  .section {
+    padding: 52px 0;
+  }
+
+  .container {
+    padding: 0 5vw;
+  }
 }
 
 @media (max-width: 425px) {
-  h1 { font-size: 2.4rem; }
-  h2 { font-size: 1.9rem; }
-  h3 { font-size: 1.55rem; }
-  h4 { font-size: 1.3rem; }
-  .section { padding: 44px 0; }
-  .btn-primary, .btn-secondary {
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 1.9rem;
+  }
+
+  h3 {
+    font-size: 1.55rem;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+  }
+
+  .section {
+    padding: 44px 0;
+  }
+
+  .btn-primary,
+  .btn-secondary {
     padding: 11px 22px;
     font-size: 0.9rem;
   }
 }
 
 @media (max-width: 375px) {
-  h1 { font-size: 2.1rem; }
-  h2 { font-size: 1.65rem; }
-  h3 { font-size: 1.4rem; }
-  h4 { font-size: 1.15rem; }
-  .section { padding: 35px 0; }
-  .btn-primary, .btn-secondary {
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  h2 {
+    font-size: 1.65rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  h4 {
+    font-size: 1.15rem;
+  }
+
+  .section {
+    padding: 35px 0;
+  }
+
+  .btn-primary,
+  .btn-secondary {
     padding: 9px 18px;
     font-size: 0.85rem;
   }
 }
 
 @media (max-width: 320px) {
-  h1 { font-size: 1.75rem; }
-  h2 { font-size: 1.4rem; }
-  h3 { font-size: 1.25rem; }
-  h4 { font-size: 1.05rem; }
-  .btn-primary, .btn-secondary {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  h4 {
+    font-size: 1.05rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
     padding: 7px 14px;
     font-size: 0.78rem;
   }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ChevronDown } from 'lucide-react';
@@ -11,11 +11,25 @@ const Navbar = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const isContactPage = location.pathname === '/contact-us';
 
   return (
-    <header className={`navbar ${isContactPage ? 'navbar-solid' : ''}`}>
+    <header className={`navbar ${isContactPage ? 'navbar-solid' : ''} ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container nav-wrap">
         <Link to="/" className="brand">
           <img src="/logo.png" alt="Logo" className="logo" />
