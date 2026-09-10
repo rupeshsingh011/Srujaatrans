@@ -25,7 +25,13 @@ export const resources = {
         ofExperience: "of experience",
         ctpDesc: "Certified Translation Professional",
         istqbDesc: "Certificate in Software Testing",
-        prozDesc: "Translator working in the Language pair Marathi to English"
+        prozDesc: "Translator working in the Language pair Marathi to English",
+        multilingualTitle: "Multilingual Expertise",
+        multilingualDesc: "Translation, editing & localization across multiple languages.",
+        happyClients: "Happy Clients",
+        projectsCompleted: "Projects Completed",
+        languagesStat: "Languages",
+        yearsExperienceStat: "Years Experience"
       },
       about: {
         title: "About",
@@ -216,7 +222,13 @@ export const resources = {
         ofExperience: "अनुभव",
         ctpDesc: "प्रमाणित भाषांतरकार व्यावसायिक",
         istqbDesc: "सॉफ्टवेअर टेस्टिंगमधील प्रमाणपत्र",
-        prozDesc: "मराठी ते इंग्रजी भाषा जोडीत काम करणारी भाषांतरकार"
+        prozDesc: "मराठी ते इंग्रजी भाषा जोडीत काम करणारी भाषांतरकार",
+        multilingualTitle: "Multilingual Expertise",
+        multilingualDesc: "अनेक भाषांमध्ये भाषांतर, संपादन आणि स्थानिकीकरण.",
+        happyClients: "समाधानी ग्राहक",
+        projectsCompleted: "प्रकल्प पूर्ण",
+        languagesStat: "भाषा",
+        yearsExperienceStat: "वर्षांचा अनुभव"
       },
       about: {
         title: "माझ्याबद्दल",
@@ -407,7 +419,13 @@ export const resources = {
         ofExperience: "का अनुभव",
         ctpDesc: "प्रमाणित अनुवाद व्यावसायिक",
         istqbDesc: "सॉफ्टवेयर टेस्टिंग में प्रमाणपत्र प्राप्त",
-        prozDesc: "मराठी से अंग्रेजी भाषा जोड़ी में काम करने वाली अनुवादक"
+        prozDesc: "मराठी से अंग्रेजी भाषा जोड़ी में काम करने वाली अनुवादक",
+        multilingualTitle: "Multilingual Expertise",
+        multilingualDesc: "कई भाषाओं में अनुवाद, संपादन और लोकलाइजेशन।",
+        happyClients: "संतुष्ट ग्राहक",
+        projectsCompleted: "प्रोजेक्ट पूरे किए",
+        languagesStat: "भाषाएँ",
+        yearsExperienceStat: "वर्षों का अनुभव"
       },
       about: {
         title: "विवरण",
@@ -593,12 +611,18 @@ export const resources = {
       hero: {
         name: "Hi, I'm Mugdha",
         available: "Verfügbar",
-        description: "Hallo, ich bin eine zertifizierte Übersetzerin mit über 14 Jahren Erfahrung, die präzise mehrsprachige Übersetzungen, Lektorat, <br/>Untertitelung <br/>und Lokalisierung für globale <br/>Kunden liefert.",
+        description: "Hallo, ich bin eine zertifizierte Übersetzerin mit über 14 Jahren Erfahrung, die präzise mehrsprachige Übersetzungen, Lektorat, Untertitelung und Lokalisierung für globale <br/>Kunden liefert.",
         years: "Jahre",
         ofExperience: "Erfahrung",
         ctpDesc: "Zertifizierter Übersetzungsprofi",
         istqbDesc: "Zertifikat in Softwaretests",
-        prozDesc: "Übersetzerin in der Sprachkombination Marathi nach Englisch"
+        prozDesc: "Übersetzerin in der Sprachkombination Marathi nach Englisch",
+        multilingualTitle: "Mehrsprachige Expertise",
+        multilingualDesc: "Übersetzung, Bearbeitung und Lokalisierung in mehreren Sprachen.",
+        happyClients: "Zufriedene Kunden",
+        projectsCompleted: "Abgeschlossene Projekte",
+        languagesStat: "Sprachen",
+        yearsExperienceStat: "Jahre Erfahrung"
       },
       about: {
         title: "Über mich",

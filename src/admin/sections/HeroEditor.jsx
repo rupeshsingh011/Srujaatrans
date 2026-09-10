@@ -10,6 +10,12 @@ const fields = [
   { key: 'ctpDesc', label: 'CTP award description' },
   { key: 'istqbDesc', label: 'ISTQB award description' },
   { key: 'prozDesc', label: 'ProZ award description' },
+  { key: 'multilingualTitle', label: 'Multilingual title' },
+  { key: 'multilingualDesc', label: 'Multilingual description' },
+  { key: 'happyClients', label: 'Happy Clients label' },
+  { key: 'projectsCompleted', label: 'Projects Completed label' },
+  { key: 'languagesStat', label: 'Languages label' },
+  { key: 'yearsExperienceStat', label: 'Years Experience label' },
 ];
 
 export default function HeroEditor() {
