@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const REVEAL_SELECTOR =
-  'h1, h2, h3, h4, h5, h6, p, img, .project-card, .service-card, .experience-card, .skill-card-lg, .award-card-lg, .slide, .contact-card';
+  'h1, h2, h3, h4, h5, h6, p, img, .project-card, .service-card, .experience-card, .skill-card-lg, .award-card-lg, .slide, .contact-card, .bento-item, .work-reveal-wrapper, .service-glass-card, .cert-card-bar, .faq-reveal-wrapper, .hero-tagline, .btn, .info-card, .company-logo';
 
 const useReveal = () => {
   const location = useLocation();

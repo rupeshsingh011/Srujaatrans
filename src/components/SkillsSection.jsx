@@ -8,26 +8,25 @@ const SkillsSection = () => {
 
   return (
     <section className="skills-section bg-background-1" id="skills">
-      <div className="container skills-container">
-        <div className="skills-left">
-          <div className="section-title">
-            <div className="caption-outer">
-              <span className="caption-title">{t('skills.title')}</span>
-            </div>
-            <h2>{t('skills.heading')}</h2>
-          </div>
+      <div className="container">
+        <div className="segue-title-wrapper">
+          <h2 className="segue-heading">{t('skills.heading')}</h2>
+          <div className="skills-underline"></div>
+          <p className="skills-subtitle">
+            {t('skills.subtitle')}
+          </p>
         </div>
 
-        <div className="skills-right">
-          <div className="skills-grid translation-grid">
-            {lists.skills.map((skill) => (
-              <div className="skill-card-lg" key={skill._id}>
-                <div className="skill-icon-lg">
+        <div className="marquee-container">
+          <div className="marquee-track">
+            {[...lists.skills, ...lists.skills].map((skill, index) => (
+              <div className="skill-card-rect" key={`${skill._id}-${index}`}>
+                <div className="skill-icon-rect">
                   {skill.image ? (
                     <img
                       src={skill.image}
                       alt={skill.name}
-                      style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '18px' }}
+                      style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                     />
                   ) : (
                     <svg viewBox="0 0 64 64" fill="none" style={{ width: '100%', height: '100%' }}>
@@ -35,7 +34,7 @@ const SkillsSection = () => {
                     </svg>
                   )}
                 </div>
-                <div className="skill-details">
+                <div className="skill-details-rect">
                   <div className="skill-name">{skill.name}</div>
                 </div>
               </div>

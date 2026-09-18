@@ -45,20 +45,21 @@ const FaqSection = () => {
         <div className="faq-right">
           <div className="faq-block">
             {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className={`faq-item ${openIndex === index ? 'open' : ''}`}
-                onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
-              >
-                <div className="faq-question-block">
-                  <h6 className="faq-question">{faq.question}</h6>
-                  <div className="faq-toggle-icon">
-                    <ChevronDown size={20} strokeWidth={2.25} />
+              <div key={index} className="faq-reveal-wrapper">
+                <div
+                  className={`faq-item ${openIndex === index ? 'open' : ''}`}
+                  onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
+                >
+                  <div className="faq-question-block">
+                    <h6 className="faq-question">{faq.question}</h6>
+                    <div className="faq-toggle-icon">
+                      <ChevronDown size={20} strokeWidth={2.25} />
+                    </div>
                   </div>
-                </div>
-                <div className="faq-answer-block">
-                  <div className="faq-answer">
-                    <p>{faq.answer}</p>
+                  <div className="faq-answer-block">
+                    <div className="faq-answer">
+                      <p>{faq.answer}</p>
+                    </div>
                   </div>
                 </div>
               </div>

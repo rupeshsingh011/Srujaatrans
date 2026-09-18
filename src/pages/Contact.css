@@ -167,7 +167,34 @@
     grid-column: span 1;
   }
 
-  .form-inner.full-width, .form-submit, .form-status {
+  .form-inner.full-width,
+  .form-submit,
+  .form-status {
     grid-column: span 1;
   }
+}
+
+.social-wrap {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--bg-color-alt);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: var(--accent-gradient);
+  color: #fff;
+  border-color: transparent;
 }

@@ -17,12 +17,18 @@ const CertificationsSection = () => {
               <span className="caption-title">{t('certifications.title')}</span>
             </div>
             <h2>{t('certifications.heading')}</h2>
+              <div className="cert-underline"></div>
           </div>
         </div>
 
         <div className="certifications-right">
           <div className="certifications-grid">
-            {lists.certifications.map((cert) => (
+            {[
+              { _id: 'custom-ctp', line1: 'CTP', line2: '', image: '/CTP.png', color: '#ff6b6b' },
+              { _id: 'custom-istqb', line1: 'ISTBQ Certified', line2: '', image: '/ISTQB Certificate.jpg', color: '#4a90e2' },
+              { _id: 'custom-proz', line1: 'Certified Pro Network', line2: '', image: '/Proz PRO Network.jpg', color: '#5cb85c' },
+              ...lists.certifications.filter(c => !['CTP', 'ISTBQ Certified', 'Certified Pro Network', 'ISTQB Certified'].includes(c.line1))
+            ].map((cert) => (
               <div
                 className="cert-card-bar"
                 key={cert._id}

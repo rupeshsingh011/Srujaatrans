@@ -102,11 +102,11 @@ app.post('/api/contact', async (req, res) => {
   try {
     // Save to MongoDB
     if (mongoose.connection.readyState === 1) {
-      const newContact = new Contact({ 
-        "Full Name": fullName, 
-        "Email": email, 
-        "Phone": phone, 
-        "Send Message": sendMessage 
+      const newContact = new Contact({
+        "Full Name": fullName,
+        "Email": email,
+        "Phone": phone,
+        "Send Message": sendMessage
       });
       await newContact.save();
     }

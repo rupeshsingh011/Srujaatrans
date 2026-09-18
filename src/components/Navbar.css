@@ -14,7 +14,7 @@
 
 .navbar.scrolled {
   padding: 0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .nav-wrap {
@@ -113,7 +113,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 6px;
 }
@@ -137,6 +137,11 @@
   .desktop-only {
     display: none;
   }
+
+  .menu-btn {
+    display: flex;
+  }
+
   .logo {
     margin-left: 0;
   }
@@ -198,8 +203,15 @@
 }
 
 @keyframes lang-dropdown-in {
-  from { opacity: 0; transform: translateY(-6px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .lang-option {
@@ -273,16 +285,33 @@
 }
 
 @media (max-width: 480px) {
-  .logo { height: 60px; }
-  .nav-wrap { padding: 0 10px; }
-  .lang-switcher-btn { padding: 6px 10px; font-size: 0.9rem; }
+  .logo {
+    height: 60px;
+  }
+
+  .nav-wrap {
+    padding: 0 10px;
+  }
+
+  .lang-switcher-btn {
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 375px) {
-  .logo { height: 50px; }
-  .lang-switcher-btn { padding: 5px 8px; font-size: 0.85rem; }
+  .logo {
+    height: 50px;
+  }
+
+  .lang-switcher-btn {
+    padding: 5px 8px;
+    font-size: 0.85rem;
+  }
 }
 
 @media (max-width: 320px) {
-  .logo { height: 40px; }
+  .logo {
+    height: 40px;
+  }
 }

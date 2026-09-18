@@ -13,31 +13,35 @@ const HeroSection = () => {
 
         {/* Left Content Area */}
         <div className="hero-content">
-          <div className="status-badge">
-            <span className="status-dot"></span>
-            <span className="status-text">{t('hero.available')}</span>
-          </div>
 
-          <h1 className="hero-title" dangerouslySetInnerHTML={{ 
+
+          <h1 className="hero-title" dangerouslySetInnerHTML={{
             __html: t('hero.name')
-              .replace('Mugdha', '<br/><span class="text-primary">Mugdha</span>')
+              .replace('Mugdha ( Srujaa )', '<br/><span class="text-primary" style="display: inline-block; margin-top: -15px; white-space: nowrap;">Mugdha <span style="color: #555; font-size: 0.85em;">(Srujaa)</span></span>')
+              .replace('Mugdha', '<br/><span class="text-primary" style="display: inline-block; margin-top: -15px; white-space: nowrap;">Mugdha <span style="color: #555; font-size: 0.85em;">(Srujaa)</span></span>')
+              .replace('मैं मुग्धा ( Srujaa )', 'MAGIC_HI')
+              .replace('मी मुग्धा ( Srujaa )', 'MAGIC_MR')
               .replace('मैं मुग्धा', 'MAGIC_HI')
               .replace('मी मुग्धा', 'MAGIC_MR')
-              .replace('मुग्धा', '<br/><span class="text-primary">मुग्धा</span>')
-              .replace('MAGIC_HI', '<br/>मैं <span class="text-primary">मुग्धा</span>')
-              .replace('MAGIC_MR', '<br/>मी <span class="text-primary">मुग्धा</span>')
+              .replace('मुग्धा ( Srujaa )', '<br/><span class="text-primary" style="display: inline-block; margin-top: -15px; white-space: nowrap;">मुग्धा <span style="color: #555; font-size: 0.85em;">(Srujaa)</span></span>')
+              .replace('मुग्धा', '<br/><span class="text-primary" style="display: inline-block; margin-top: -15px; white-space: nowrap;">मुग्धा <span style="color: #555; font-size: 0.85em;">(Srujaa)</span></span>')
+              .replace('MAGIC_HI', '<br/>मैं <span class="text-primary" style="display: inline-block; margin-top: -15px; white-space: nowrap;">मुग्धा <span style="color: #555; font-size: 0.85em;">(Srujaa)</span></span>')
+              .replace('MAGIC_MR', '<br/>मी <span class="text-primary" style="display: inline-block; margin-top: -15px; white-space: nowrap;">मुग्धा <span style="color: #555; font-size: 0.85em;">(Srujaa)</span></span>')
           }}></h1>
+
+          <div className="hero-tagline" dangerouslySetInnerHTML={{ __html: t('hero.tagline') }}>
+          </div>
 
           <p className="hero-description" dangerouslySetInnerHTML={{ __html: t('hero.description') }}></p>
 
           <div className="hero-actions">
-            <Link to="/contact-us" className="btn btn-primary">
-              <Send size={18} />
-              <span>Hire Me</span>
-            </Link>
-            <a href="/resume.pdf" className="btn btn-outline" target="_blank" rel="noopener noreferrer">
+            <a href="/Mugdha_Resume.pdf" download="Mugdha_Resume.pdf" className="btn btn-primary" target="_blank" rel="noopener noreferrer">
               <Download size={18} />
-              <span>Download CV</span>
+              <span>{t('about.downloadResume').replace('Download ', '')}</span>
+            </a>
+            <a href="/CV_Mugdha%20Ghate_V28.pdf" download="CV_Mugdha Ghate_V28.pdf" className="btn btn-outline" target="_blank" rel="noopener noreferrer">
+              <Download size={18} />
+              <span>{t('about.downloadCV').replace('Download ', '').replace('BCV', 'Blind CV')}</span>
             </a>
           </div>
         </div>
@@ -57,91 +61,9 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Info Cards Row */}
-      <div className="info-cards-container">
-        <a href="/CTP.png" target="_blank" rel="noopener noreferrer" className="info-card" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <div className="card-icon-wrapper">
-            <Award className="card-icon" />
-          </div>
-          <div className="card-text">
-            <h3>CTP</h3>
-            <p>{t('hero.ctpDesc')}</p>
-          </div>
-        </a>
 
-        <a href="/ISTQB Certificate.jpg" target="_blank" rel="noopener noreferrer" className="info-card" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <div className="card-icon-wrapper">
-            <FileText className="card-icon" />
-          </div>
-          <div className="card-text">
-            <h3>ISTBQ Certificate</h3>
-            <p>{t('hero.istqbDesc')}</p>
-          </div>
-        </a>
 
-        <a href="/Proz PRO Network.jpg" target="_blank" rel="noopener noreferrer" className="info-card" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <div className="card-icon-wrapper">
-            <Share2 className="card-icon" />
-          </div>
-          <div className="card-text">
-            <h3>Certified Pro Network</h3>
-            <p>{t('hero.prozDesc')}</p>
-          </div>
-        </a>
 
-        <div className="info-card">
-          <div className="card-icon-wrapper">
-            <Globe className="card-icon" />
-          </div>
-          <div className="card-text">
-            <h3>{t('hero.multilingualTitle')}</h3>
-            <p>{t('hero.multilingualDesc')}</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Stats Row */}
-      <div className="info-cards-container" style={{ marginTop: '0' }}>
-        <div className="info-card">
-          <div className="card-icon-wrapper">
-            <Users className="card-icon" />
-          </div>
-          <div className="card-text">
-            <h3>500+</h3>
-            <p>{t('hero.happyClients')}</p>
-          </div>
-        </div>
-        
-        <div className="info-card">
-          <div className="card-icon-wrapper">
-            <FileText className="card-icon" />
-          </div>
-          <div className="card-text">
-            <h3>10K+</h3>
-            <p>{t('hero.projectsCompleted')}</p>
-          </div>
-        </div>
-        
-        <div className="info-card">
-          <div className="card-icon-wrapper">
-            <Globe className="card-icon" />
-          </div>
-          <div className="card-text">
-            <h3>20+</h3>
-            <p>{t('hero.languagesStat')}</p>
-          </div>
-        </div>
-        
-        <div className="info-card">
-          <div className="card-icon-wrapper">
-            <Clock className="card-icon" />
-          </div>
-          <div className="card-text">
-            <h3>14+</h3>
-            <p>{t('hero.yearsExperienceStat')}</p>
-          </div>
-        </div>
-      </div>
 
     </section>
   );

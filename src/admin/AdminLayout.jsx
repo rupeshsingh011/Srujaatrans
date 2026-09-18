@@ -17,7 +17,8 @@ import {
   Navigation,
   LogOut,
   ExternalLink,
-  Settings
+  Settings,
+  CreditCard
 } from 'lucide-react';
 import './Admin.css';
 
@@ -35,6 +36,7 @@ const NAV_ITEMS = [
   { to: '/admin/faq', label: 'FAQ', icon: HelpCircle },
   { to: '/admin/footer', label: 'Footer & Contact', icon: PanelBottom },
   { to: '/admin/navbar', label: 'Navbar', icon: Navigation },
+  { to: '/admin/payment', label: 'Payment', icon: CreditCard },
 ];
 
 export default function AdminLayout() {

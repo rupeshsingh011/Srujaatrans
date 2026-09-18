@@ -1,0 +1,478 @@
+.pm-page {
+  padding-top: 80px;
+  /* Account for navbar */
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.pm-hero {
+  background: var(--bg-color-alt);
+  padding: 80px 0 60px;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pm-hero-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #4A2BB3;
+  letter-spacing: -0.5px;
+}
+
+.pm-hero-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.pm-main-content {
+  padding: 60px 0 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- GRID SYSTEM --- */
+.pm-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+/* --- PAYMENT CARDS --- */
+.pm-card {
+  background: var(--bg-color-alt);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.pm-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+  border-color: var(--border-color-strong, #ccc);
+}
+
+.pm-card-active {
+  border-color: var(--accent-color, #6366f1);
+  box-shadow: 0 12px 24px rgba(99, 102, 241, 0.15);
+  background: linear-gradient(180deg, var(--bg-color-alt) 0%, rgba(99, 102, 241, 0.03) 100%);
+}
+
+.pm-card-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: var(--accent-color, #6366f1);
+  background: var(--bg-color-alt);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: scaleIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.pm-card-icon-wrapper {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.pm-brand-img {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+}
+
+.payoneer-img {
+  height: 45px;
+}
+
+.upi-img {
+  height: 28px;
+}
+
+.pm-lucide-icon {
+  color: var(--text-primary);
+}
+
+.bank-icon-color {
+  color: #10b981;
+}
+
+.pm-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.pm-card-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.pm-multi-bank-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.hdfc-img {
+  height: 28px;
+}
+
+.deutsche-img {
+  height: 68px;
+}
+
+/* --- SELECTED PANEL --- */
+.pm-panel-wrapper {
+  width: 100%;
+  max-width: 450px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease;
+}
+
+.pm-panel-visible {
+  max-height: 1000px;
+  /* arbitrary large value */
+  opacity: 1;
+}
+
+.pm-bank-wrapper {
+  max-width: 800px;
+}
+
+.pm-bank-wrapper .pm-panel {
+  padding: 20px 30px;
+}
+
+.pm-bank-wrapper .pm-info-row {
+  padding: 10px 16px;
+  gap: 2px;
+}
+
+.pm-bank-wrapper .pm-panel-header {
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+}
+
+.pm-panel {
+  background: var(--bg-color-alt);
+  border: 1px solid var(--accent-color, #6366f1);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.pm-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6, #3b82f6);
+}
+
+.pm-panel-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pm-panel-icon {
+  background: var(--bg-color);
+  min-width: 50px;
+  height: 50px;
+  padding: 0 25px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+}
+
+.pm-panel-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.pm-panel-body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.pm-panel-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.pm-bank-selector {
+  display: flex;
+  gap: 16px;
+  background: rgba(0, 0, 0, 0.03);
+  padding: 6px;
+  border-radius: 12px;
+}
+
+.pm-bank-tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pm-bank-tab img {
+  height: 20px;
+  object-fit: contain;
+}
+
+.pm-bank-tab:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.pm-bank-tab.active {
+  background: var(--bg-color);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.pm-info-row {
+  background: var(--bg-color);
+  padding: 16px 20px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pm-bank-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.pm-info-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.pm-info-value {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  word-break: break-all;
+}
+
+.pm-summary-box {
+  background: rgba(99, 102, 241, 0.05);
+  border: 1px dashed rgba(99, 102, 241, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pm-summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.pm-amount {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.pm-total {
+  padding-top: 12px;
+  margin-top: 4px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.pm-amount-total {
+  font-size: 1.25rem;
+  color: var(--accent-color, #6366f1);
+}
+
+/* --- BUTTONS --- */
+.pm-cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px 24px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  margin-top: 10px;
+}
+
+.pm-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.pm-cta-btn:active {
+  transform: translateY(0);
+}
+
+.paypal-btn {
+  background-color: #00457C;
+}
+
+.paypal-btn:hover {
+  background-color: #003666;
+}
+
+.payoneer-btn {
+  background-color: #ff4800;
+}
+
+.payoneer-btn:hover {
+  background-color: #e64100;
+}
+
+.upi-btn {
+  background-color: #4CAF50;
+}
+
+.upi-btn:hover {
+  background-color: #43A047;
+}
+
+.bank-btn {
+  background-color: #111827;
+}
+
+.bank-btn:hover {
+  background-color: #000000;
+}
+
+.pm-secure-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+  color: #10b981;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 1024px) {
+  .pm-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .pm-hero {
+    padding: 60px 20px 40px;
+  }
+
+  .pm-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .pm-main-content {
+    padding: 40px 20px 80px;
+  }
+
+  .pm-panel {
+    padding: 20px;
+  }
+
+  .pm-bank-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pm-bank-selector {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pm-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pm-hero-title {
+    font-size: 1.8rem;
+  }
+}

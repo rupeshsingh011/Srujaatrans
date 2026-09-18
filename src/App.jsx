@@ -5,7 +5,8 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
-import AnimatedBubbles from './components/AnimatedBubbles';
+import PaymentMethods from './components/PaymentMethods';
+
 import { AdminAuthProvider } from './context/AdminAuthContext.jsx';
 import AdminLogin from './admin/AdminLogin.jsx';
 import AdminLayout from './admin/AdminLayout.jsx';
@@ -23,11 +24,11 @@ import ReviewsEditor from './admin/sections/ReviewsEditor.jsx';
 import FaqEditor from './admin/sections/FaqEditor.jsx';
 import FooterEditor from './admin/sections/FooterEditor.jsx';
 import NavbarEditor from './admin/sections/NavbarEditor.jsx';
+import PaymentEditor from './admin/sections/PaymentEditor.jsx';
 
 function PublicLayout({ children }) {
   return (
     <>
-      <AnimatedBubbles />
       <Navbar />
       {children}
       <Footer />
@@ -42,6 +43,7 @@ function App() {
         <Routes>
           <Route path="/" element={<PublicLayout><Home /></PublicLayout>} />
           <Route path="/contact-us" element={<PublicLayout><Contact /></PublicLayout>} />
+          <Route path="/payment-methods" element={<PublicLayout><PaymentMethods /></PublicLayout>} />
 
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route
@@ -65,6 +67,7 @@ function App() {
             <Route path="faq" element={<FaqEditor />} />
             <Route path="footer" element={<FooterEditor />} />
             <Route path="navbar" element={<NavbarEditor />} />
+            <Route path="payment" element={<PaymentEditor />} />
           </Route>
         </Routes>
       </AdminAuthProvider>
