@@ -17,6 +17,8 @@ const HeroSection = () => {
 
           <h1 className="hero-title" dangerouslySetInnerHTML={{
             __html: t('hero.name')
+              .replace(' हूँ,', '')
+              .replace('हूँ,', '')
               .replace('Mugdha ( Srujaa )', '<br/><span class="text-primary" style="display: inline-block; margin-top: -15px; white-space: nowrap;">Mugdha <span style="color: #555; font-size: 0.85em;">(Srujaa)</span></span>')
               .replace('Mugdha', '<br/><span class="text-primary" style="display: inline-block; margin-top: -15px; white-space: nowrap;">Mugdha <span style="color: #555; font-size: 0.85em;">(Srujaa)</span></span>')
               .replace('मैं मुग्धा ( Srujaa )', 'MAGIC_HI')

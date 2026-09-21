@@ -47,7 +47,8 @@
   height: 200px; /* Maximized */
   flex-shrink: 0;
   border-radius: 8px; /* Smooth rounded corners since border is gone */
-  overflow: hidden;
+  /* Remove overflow hidden to allow 3D rotation not to be clipped, but add perspective */
+  perspective: 1000px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* Slightly larger shadow to pop out without border */
   background-color: var(--bg-secondary, #f5f5f5);
   transition: transform 0.3s ease;
@@ -59,10 +60,45 @@
   object-fit: contain; /* Fit the image within the container */
   display: block;
   transition: transform 0.5s ease;
+  border-radius: 8px;
 }
 
 .work-grid-item:hover .work-item-image {
   transform: scale(1.08); /* More pronounced */
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+  border-radius: 8px;
+}
+
+.work-grid-item:hover .flip-inner.has-flip {
+  transform: rotateY(180deg);
+}
+
+.work-grid-item:hover .flip-inner.has-flip .work-item-image {
+  /* Prevent scale on hover when flipping to avoid distortion */
+  transform: scale(1);
+}
+
+.flip-front, .flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  top: 0;
+  left: 0;
+  border-radius: 8px;
+  background-color: var(--bg-secondary, #f5f5f5);
+}
+
+.flip-back {
+  transform: rotateY(180deg);
 }
 
 .work-item-image-placeholder {

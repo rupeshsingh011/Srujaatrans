@@ -42,8 +42,10 @@ const ExperienceSection = () => {
         <div className="work-grid">
           {lists.workItems.map((item, index) => {
             let fullTitle = item.title?.[lang] || item.title?.en || '';
+            let enTitle = item.title?.en || fullTitle;
             let tag = null;
             let mainTitle = fullTitle;
+            let enMainTitle = enTitle;
             
             if (fullTitle.includes('(')) {
               const parsed = getLanguageTag(fullTitle);
@@ -56,10 +58,24 @@ const ExperienceSection = () => {
               else if (item.image.includes('_DE')) tag = '(DE)';
             }
 
+            if (enTitle.includes('(')) {
+              enMainTitle = getLanguageTag(enTitle).mainTitle;
+            }
+
+            const imageSrc = item.image || fallbackImages[enMainTitle] || fallbackImages[mainTitle];
+            const fallbackSrc = fallbackImages[enMainTitle] || fallbackImages[mainTitle];
+
             // Determine if the row is an even row (0-indexed) for desktop zig-zag
             const rowIndex = Math.floor(index / 3);
             const isReverse = rowIndex % 2 === 1;
             const fromRight = isReverse;
+
+            let hoverImage = null;
+            if (enTitle.includes('The Little Black Book for Stunning Success') && enTitle.includes('MAR')) {
+              hoverImage = '/The Little Black Book for Stunning Success - cover page in marathi.webp';
+            } else if (enTitle.includes('Tales of Shakespeare') && enTitle.includes('MAR')) {
+              hoverImage = '/tales-from-shakespeare-marathi-charles-and-mary-lamb-marathi.jpg';
+            }
 
             return (
               <motion.a 
@@ -80,16 +96,41 @@ const ExperienceSection = () => {
                 transition={{ duration: 0.7, type: "spring", bounce: 0.2, delay: index * 0.15 }}
               >
                 <div className="work-item-image-wrapper">
-                  {item.image || fallbackImages[mainTitle] ? (
+                  {hoverImage ? (
+                    <div className="flip-inner has-flip">
+                      <div className="flip-front">
+                        <img 
+                          src={imageSrc} 
+                          alt={mainTitle} 
+                          className="work-item-image" 
+                          loading="lazy"
+                          onError={(e) => {
+                            if (fallbackSrc && !e.target.src.endsWith(fallbackSrc)) {
+                              e.target.src = fallbackSrc;
+                            } else {
+                              e.target.style.display = 'none';
+                            }
+                          }}
+                        />
+                      </div>
+                      <div className="flip-back">
+                        <img 
+                          src={hoverImage} 
+                          alt={`${mainTitle} Hover`} 
+                          className="work-item-image" 
+                          loading="lazy"
+                        />
+                      </div>
+                    </div>
+                  ) : imageSrc ? (
                     <img 
-                      src={item.image || fallbackImages[mainTitle]} 
+                      src={imageSrc} 
                       alt={mainTitle} 
                       className="work-item-image" 
                       loading="lazy"
                       onError={(e) => {
-                        const fallback = fallbackImages[mainTitle];
-                        if (fallback && !e.target.src.endsWith(fallback)) {
-                          e.target.src = fallback;
+                        if (fallbackSrc && !e.target.src.endsWith(fallbackSrc)) {
+                          e.target.src = fallbackSrc;
                         } else {
                           e.target.style.display = 'none';
                         }
