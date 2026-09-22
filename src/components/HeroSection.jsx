@@ -19,16 +19,18 @@ const HeroSection = () => {
             __html: t('hero.name')
               .replace(' हूँ,', '')
               .replace('हूँ,', '')
-              .replace('Mugdha ( Srujaa )', '<br/><span class="text-primary" style="display: inline-block; margin-top: -15px; white-space: nowrap;">Mugdha <span style="color: #555; font-size: 0.85em;">(Srujaa)</span></span>')
-              .replace('Mugdha', '<br/><span class="text-primary" style="display: inline-block; margin-top: -15px; white-space: nowrap;">Mugdha <span style="color: #555; font-size: 0.85em;">(Srujaa)</span></span>')
+              .replace('Mugdha ( Srujaa )', 'MAGIC_EN')
+              .replace('Mugdha', 'MAGIC_EN')
               .replace('मैं मुग्धा ( Srujaa )', 'MAGIC_HI')
               .replace('मी मुग्धा ( Srujaa )', 'MAGIC_MR')
               .replace('मैं मुग्धा', 'MAGIC_HI')
               .replace('मी मुग्धा', 'MAGIC_MR')
-              .replace('मुग्धा ( Srujaa )', '<br/><span class="text-primary" style="display: inline-block; margin-top: -15px; white-space: nowrap;">मुग्धा <span style="color: #555; font-size: 0.85em;">(Srujaa)</span></span>')
-              .replace('मुग्धा', '<br/><span class="text-primary" style="display: inline-block; margin-top: -15px; white-space: nowrap;">मुग्धा <span style="color: #555; font-size: 0.85em;">(Srujaa)</span></span>')
+              .replace('मुग्धा ( Srujaa )', 'MAGIC_LOCAL')
+              .replace('मुग्धा', 'MAGIC_LOCAL')
+              .replace('MAGIC_EN', '<br/><span class="text-primary" style="display: inline-block; margin-top: -15px; white-space: nowrap;">Mugdha <span style="color: #555; font-size: 0.85em;">(Srujaa)</span></span>')
               .replace('MAGIC_HI', '<br/>मैं <span class="text-primary" style="display: inline-block; margin-top: -15px; white-space: nowrap;">मुग्धा <span style="color: #555; font-size: 0.85em;">(Srujaa)</span></span>')
               .replace('MAGIC_MR', '<br/>मी <span class="text-primary" style="display: inline-block; margin-top: -15px; white-space: nowrap;">मुग्धा <span style="color: #555; font-size: 0.85em;">(Srujaa)</span></span>')
+              .replace('MAGIC_LOCAL', '<br/><span class="text-primary" style="display: inline-block; margin-top: -15px; white-space: nowrap;">मुग्धा <span style="color: #555; font-size: 0.85em;">(Srujaa)</span></span>')
           }}></h1>
 
           <div className="hero-tagline" dangerouslySetInnerHTML={{ __html: t('hero.tagline') }}>
