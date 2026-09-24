@@ -85,13 +85,9 @@ export default function Footer() {
           </div>
 
         </div>
-      </div>
-
-      <div className="container footer-container">
+        
         <hr className="footer-divider" />
-      </div>
-
-      <div className="container footer-container">
+        
         <div className="footer-bottom">
           <div className="footer-copyright">
             <p className="copyright-text">
