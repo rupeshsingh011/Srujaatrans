@@ -41,6 +41,7 @@ const Navbar = () => {
           <a href="/#experience">{t('nav.experience')}</a>
           <a href="/#skills">{t('nav.skills')}</a>
           <a href="/#reviews">{t('nav.reviews')}</a>
+          <Link to="/payment-methods">{t('nav.payment')}</Link>
         </nav>
         <div className="nav-right">
           <Link to="/contact-us" className="btn-primary desktop-only">{t('nav.contact')}</Link>
@@ -112,6 +113,7 @@ const Navbar = () => {
             <a href="/#experience" onClick={() => setIsOpen(false)}>{t('nav.experience')}</a>
             <a href="/#skills" onClick={() => setIsOpen(false)}>{t('nav.skills')}</a>
             <a href="/#reviews" onClick={() => setIsOpen(false)}>{t('nav.reviews')}</a>
+            <Link to="/payment-methods" onClick={() => setIsOpen(false)}>{t('nav.payment')}</Link>
             <Link to="/contact-us" onClick={() => setIsOpen(false)} className="mobile-contact-btn">{t('nav.contact')}</Link>
           </div>
         </div>

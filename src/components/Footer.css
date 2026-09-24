@@ -128,7 +128,6 @@
 }
 
 .footer-bottom {
-  border-top: 1px solid #cccccc;
   padding-top: 30px;
   display: flex;
   justify-content: flex-start;
@@ -139,6 +138,7 @@
 
 .footer-copyright {
   width: 100%;
+  text-align: center;
 }
 
 .copyright-text {
@@ -212,4 +212,11 @@
 
 .footer-lang-de .footer-nav-list a {
   font-size: 0.85rem;
+}
+
+.footer-divider {
+  border: none;
+  border-top: 1px solid #cccccc;
+  margin: 0;
+  width: 100%;
 }

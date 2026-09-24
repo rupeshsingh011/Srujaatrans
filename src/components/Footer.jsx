@@ -11,8 +11,7 @@ export default function Footer() {
   const currentLang = (i18n.language || 'en').split('-')[0];
 
   const email = t('footer.email') || 'connect@srujaatrans.com';
-  const phone = t('footer.phone') || '+91 9850994406';
-  const phoneDigits = phone.replace(/[^0-9+]/g, '');
+
 
   return (
     <footer className={`footer footer-lang-${currentLang}`} id="contact">
@@ -40,7 +39,6 @@ export default function Footer() {
               <h4 className="footer-nav-title">{t('footer.contact')}</h4>
               <ul className="footer-nav-list">
                 <li><a href={`mailto:${email}`}>{email}</a></li>
-                <li><a href={`tel:${phoneDigits}`}>{phone}</a></li>
               </ul>
             </div>
 
@@ -87,11 +85,17 @@ export default function Footer() {
           </div>
 
         </div>
+      </div>
 
+      <div className="container footer-container">
+        <hr className="footer-divider" />
+      </div>
+
+      <div className="container footer-container">
         <div className="footer-bottom">
           <div className="footer-copyright">
             <p className="copyright-text">
-              <span className="copyright-main">{t('footer.copyright')} {t('footer.workBy')}</span><br />
+              <span className="copyright-main">{t('footer.copyright')} {t('footer.workBy')} | UAM No. UP29D0030127 | GSTIN: 09ADBFS1950K1ZV | LLP Identifiation No. AAG-2185 | PAN No. ADBFS1950K</span><br />
               <span className="copyright-subtext">{t('footer.disclaimer')}</span>
             </p>
           </div>

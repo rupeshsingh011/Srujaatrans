@@ -36,7 +36,7 @@ const HeroSection = () => {
           <div className="hero-tagline" dangerouslySetInnerHTML={{ __html: t('hero.tagline') }}>
           </div>
 
-          <p className="hero-description" dangerouslySetInnerHTML={{ __html: t('hero.description') }}></p>
+          <div className="hero-description" dangerouslySetInnerHTML={{ __html: t('hero.description') }}></div>
 
           <div className="hero-actions">
             <a href="/Mugdha_Resume.pdf" download="Mugdha_Resume.pdf" className="btn btn-primary" target="_blank" rel="noopener noreferrer">

@@ -54,18 +54,19 @@ export const resources = {
       },
       nav: {
         home: "Home",
-        about: "About",
+        about: "About me",
         work: "Work",
         services: "Services",
         experience: "Experience",
-        skills: "Skills",
+        skills: "My Tools",
         reviews: "Reviews",
-        contact: "Contact Me"
+        contact: "Contact Me",
+        payment: "Payment"
       },
       hero: {
         name: "Hi, I'm Mugdha ( Srujaa )",
         available: "Available",
-        description: "A Certified Translator with 14+ years of experience, delivering <br/>accurate multilingual translations, editing, subtitling, and <br/>localization for global clients.",
+        description: "<ul style=\"list-style-type: disc; padding-left: 20px; text-align: left; margin: 0; line-height: 1.6;\"><li>Certified Translator with 14+ years of experience.</li><li>Delivering accurate multilingual services like, translations, editing, proofreading, MTPE, Dub and Sub, DTP etc.</li><li>My Pairs:<br/>&bull; English &lt;&gt; Hindi / Marathi<br/>&bull; German &lt;&gt; Hindi / English / Marathi</li></ul>",
         years: "Years",
         ofExperience: "of experience",
         ctpDesc: "Certified Translation Professional",
@@ -322,14 +323,15 @@ export const resources = {
         work: "काम",
         services: "सेवा",
         experience: "अनुभव",
-        skills: "कौशल्ये",
+        skills: "माझी साधने",
         reviews: "पुनरावलोकने",
-        contact: "संपर्क करा"
+        contact: "संपर्क करा",
+        payment: "पेमेंट"
       },
       hero: {
         name: "नमस्कार, मी मुग्धा ( Srujaa )",
         available: "उपलब्ध",
-        description: "नमस्कार, मी 14+ वर्षांचा अनुभव असलेली प्रमाणित भाषांतरकार आहे, <br/>जी जागतिक ग्राहकांसाठी अचूक बहुभाषिक भाषांतर, संपादन, <br/>सबटायटलिंग आणि स्थानिकीकरण <br/>प्रदान करते.",
+        description: "<ul style=\"list-style-type: disc; padding-left: 20px; text-align: left; margin: 0; line-height: 1.6;\"><li>14+ वर्षांचा अनुभव असलेली प्रमाणित भाषांतरकार.</li><li>भाषांतर, संपादन, प्रुफरीडिंग, MTPE, डबिंग आणि सबटायटलिंग, DTP इत्यादी अचूक बहुभाषिक सेवा प्रदान करणे.</li><li>माझ्या भाषा जोड्या:<br/>&bull; इंग्रजी &lt;&gt; हिंदी / मराठी<br/>&bull; जर्मन &lt;&gt; हिंदी / इंग्रजी / मराठी</li></ul>",
         years: "वर्षे",
         ofExperience: "अनुभव",
         ctpDesc: "प्रमाणित भाषांतरकार व्यावसायिक",
@@ -580,18 +582,19 @@ export const resources = {
       },
       nav: {
         home: "होम",
-        about: "विवरण",
+        about: "मेरे बारे में",
         work: "कार्य",
         services: "सेवाएं",
         experience: "अनुभव",
-        skills: "कौशल",
+        skills: "मेरे उपकरण",
         reviews: "समीक्षा",
-        contact: "संपर्क करें"
+        contact: "संपर्क करें",
+        payment: "भुगतान"
       },
       hero: {
         name: "नमस्ते, मैं मुग्धा ( Srujaa )",
         available: "उपलब्ध",
-        description: "14+ वर्षों के अनुभव वाली एक प्रमाणित अनुवादक, जो वैश्विक ग्राहकों के लिए <br/>सटीक बहुभाषी अनुवाद, संपादन, सबटाइटलिंग और <br/>लोकलाइजेशन प्रदान करती हूँ।",
+        description: "<ul style=\"list-style-type: disc; padding-left: 20px; text-align: left; margin: 0; line-height: 1.6;\"><li>14+ वर्षों के अनुभव के साथ एक प्रमाणित अनुवादक।</li><li>अनुवाद, संपादन, प्रूफरीडिंग, MTPE, डब और सबटाइटल्स, DTP आदि जैसी सटीक बहुभाषी सेवाएं प्रदान करना।</li><li>मेरी भाषा जोड़ियाँ:<br/>&bull; अंग्रेज़ी &lt;&gt; हिंदी / मराठी<br/>&bull; जर्मन &lt;&gt; हिंदी / अंग्रेज़ी / मराठी</li></ul>",
         years: "वर्ष",
         ofExperience: "का अनुभव",
         ctpDesc: "प्रमाणित अनुवाद व्यावसायिक",
@@ -846,14 +849,15 @@ export const resources = {
         work: "Arbeit",
         services: "Dienste",
         experience: "Erfahrung",
-        skills: "Fähigkeiten",
+        skills: "Meine Werkzeuge",
         reviews: "Bewertungen",
-        contact: "Kontakt"
+        contact: "Kontakt",
+        payment: "Zahlung"
       },
       hero: {
         name: "Hi, I'm Mugdha",
         available: "Verfügbar",
-        description: "Hallo, ich bin eine zertifizierte Übersetzerin mit über 14 Jahren Erfahrung, die präzise mehrsprachige Übersetzungen, Lektorat, Untertitelung und Lokalisierung für globale <br/>Kunden liefert.",
+        description: "<ul style=\"list-style-type: disc; padding-left: 20px; text-align: left; margin: 0; line-height: 1.6;\"><li>Zertifizierte Übersetzerin mit über 14 Jahren Erfahrung.</li><li>Bereitstellung präziser mehrsprachiger Dienstleistungen wie Übersetzung, Lektorat, Korrekturlesen, MTPE, Dub und Sub, DTP usw.</li><li>Meine Sprachpaare:<br/>&bull; Englisch &lt;&gt; Hindi / Marathi<br/>&bull; Deutsch &lt;&gt; Hindi / Englisch / Marathi</li></ul>",
         years: "Jahre",
         ofExperience: "Erfahrung",
         ctpDesc: "Zertifizierter Übersetzungsprofi",

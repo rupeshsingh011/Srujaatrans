@@ -10,6 +10,7 @@ const fields = [
   { key: 'skills', label: 'Skills' },
   { key: 'reviews', label: 'Reviews' },
   { key: 'contact', label: 'Contact button label' },
+  { key: 'payment', label: 'Payment link label' },
 ];
 
 export default function NavbarEditor() {
